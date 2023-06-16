@@ -1,5 +1,7 @@
 # AllInOne
-<img width="99.9 src="https://www.raed.net/img?id=230465"/>
+
+![AllInOne](https://www.raed.net/img?id=230465)
+
 ![Screenshot](Screenshot.png?raw=ture "Screenshot")
 
 This tool will fix all your problem's on your linux
