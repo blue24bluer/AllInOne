@@ -1,5 +1,5 @@
 # AllInOne
-<img width="99.9%" src="https://github.com/blue24bluer/AllInOne.jpg/>
+<img width="99.9%" src="https://github.com/blue24bluer/AllInOne/AllInOne.jpg/>
 ![Screenshot](Screenshot.png?raw=ture "Screenshot")
 
 This tool will fix all your problem's on your linux
