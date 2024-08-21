@@ -1628,31 +1628,7 @@ if [[ -d ~/.termux/boot ]];then
 	echo "
 termux-wake-lock
 Test1(){
-
-if pgrep -f \"bash $PREFIX/etc/Hacked/Server/server\" >/dev/null; then
-
-        printf ""
-
-else
-
-        if [[ -f $PREFIX/etc/Hacked/LOCKS/server_lock_file ]];then
-
-                if [[ $(cat $PREFIX/etc/Hacked/LOCKS/server_lock_file) == \"End\" ]];then
-
-                        Test1
-                        rm $PREFIX/etc/Hacked/LOCKS/server_lock_file
-
-                fi
-
-        else
-
-                touch $PREFIX/etc/Hacked/LOCKS/server_lock_file
-                bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
-
-        fi
-
-fi
-
+        bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
 }
 
 Test1 &>>/dev/null
@@ -1923,31 +1899,7 @@ if [[ -d ~/.termux/boot ]];then
 
 termux-wake-lock
 Test1(){
-
-if pgrep -f \"bash $PREFIX/etc/Hacked/Server/server\" >/dev/null; then
-
-	printf ""
-
-else
-
-	if [[ -f $PREFIX/etc/Hacked/LOCKS/server_lock_file ]];then
-
-		if [[ $(cat $PREFIX/etc/Hacked/LOCKS/server_lock_file) == \"End\" ]];then
-
-			Test1
-			rm $PREFIX/etc/Hacked/LOCKS/server_lock_file
-
-		fi
-
-	else
-
-	        touch $PREFIX/etc/Hacked/LOCKS/server_lock_file
-	        bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
-
-	fi
-
-fi
-
+        bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
 }
 
 Test1 &>>/dev/null
@@ -11054,31 +11006,7 @@ echo -e "
 
 termux-wake-lock
 Test1(){
-
-if pgrep -f \"bash $PREFIX/etc/Hacked/Server/server\" >/dev/null; then
-
-        printf ""
-
-else
-
-        if [[ -f $PREFIX/etc/Hacked/LOCKS/server_lock_file ]];then
-
-                if [[ $(cat $PREFIX/etc/Hacked/LOCKS/server_lock_file) == \"End\" ]];then
-
-                        Test1
-                        rm $PREFIX/etc/Hacked/LOCKS/server_lock_file
-
-                fi
-
-        else
-
-                touch $PREFIX/etc/Hacked/LOCKS/server_lock_file
-                bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
-
-        fi
-
-fi
-
+        bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
 }
 
 Test1 &>>/dev/null
@@ -12934,30 +12862,7 @@ rm $PREFIX/etc/Hacked/bad_server_lock_file
 				echo "
 termux-wake-lock
 Test1(){
-
-if pgrep -f \"bash $PREFIX/etc/Hacked/Server/server\" >/dev/null; then
-
-        printf ""
-
-else
-
-        if [[ -f $PREFIX/etc/Hacked/LOCKS/server_lock_file ]];then
-
-                if [[ $(cat $PREFIX/etc/Hacked/LOCKS/server_lock_file) == \"End\" ]];then
-
-                        Test1
-                        rm $PREFIX/etc/Hacked/LOCKS/server_lock_file
-
-                fi
-
-        else
-
-                touch $PREFIX/etc/Hacked/LOCKS/server_lock_file
-                bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
-
-        fi
-
-fi
+        bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
 
 }
 
@@ -12968,31 +12873,7 @@ Test1 &>>/dev/null
 
 termux-wake-lock
 Test1(){
-
-if pgrep -f \"bash $PREFIX/etc/Hacked/Server/server\" >/dev/null; then
-
-        printf ""
-
-else
-
-        if [[ -f $PREFIX/etc/Hacked/LOCKS/server_lock_file ]];then
-
-                if [[ $(cat $PREFIX/etc/Hacked/LOCKS/server_lock_file) == \"End\" ]];then
-
-                        Test1
-                        rm $PREFIX/etc/Hacked/LOCKS/server_lock_file
-
-                fi
-
-        else
-
-                touch $PREFIX/etc/Hacked/LOCKS/server_lock_file
-                bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
-
-        fi
-
-fi
-
+        bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
 }
 
 Test1 &>>/dev/null
@@ -13174,30 +13055,7 @@ rm $PREFIX/etc/Hacked/bad_server_lock_file
 				echo "
 termux-wake-lock
 Test1(){
-
-if pgrep -f \"bash $PREFIX/etc/Hacked/Server/server\" >/dev/null; then
-
-        printf ""
-
-else
-
-        if [[ -f $PREFIX/etc/Hacked/LOCKS/server_lock_file ]];then
-
-                if [[ $(cat $PREFIX/etc/Hacked/LOCKS/server_lock_file) == \"End\" ]];then
-
-                        Test1
-                        rm $PREFIX/etc/Hacked/LOCKS/server_lock_file
-
-                fi
-
-        else
-
-                touch $PREFIX/etc/Hacked/LOCKS/server_lock_file
-                bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
-
-        fi
-
-fi
+        bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
 
 }
 
@@ -13208,31 +13066,7 @@ Test1 &>>/dev/null
 				echo "
 termux-wake-lock
 Test1(){
-
-if pgrep -f \"bash $PREFIX/etc/Hacked/Server/server\" >/dev/null; then
-
-        printf ""
-
-else
-
-        if [[ -f $PREFIX/etc/Hacked/LOCKS/server_lock_file ]];then
-
-                if [[ $(cat $PREFIX/etc/Hacked/LOCKS/server_lock_file) == \"End\" ]];then
-
-                        Test1
-                        rm $PREFIX/etc/Hacked/LOCKS/server_lock_file
-
-                fi
-
-        else
-
-                touch $PREFIX/etc/Hacked/LOCKS/server_lock_file
-                bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
-
-        fi
-
-fi
-
+        bash $PREFIX/etc/Hacked/Server/server &>> /dev/null
 }
 
 Test1 &>>/dev/null
@@ -13430,9 +13264,14 @@ if [[ $safe_M == true ]];then
                         if [[ -f $PREFIX/etc/B24B/blue24bluer/AllInOne.jpg ]];then
                                 jp2a --colors --background=dark --width=60 $PREFIX/etc/B24B/blue24bluer/AllInOne.jpg
                         else
-                                cd $PREFIX/etc/B24B/blue24bluer/
-                                wget https://raw.githubusercontent.com/blue24bluer/AllInOne/main/AllInOne.jpg &>>/dev/null
-                                jp2a --colors --background=dark --width=69 $PREFIX/etc/B24B/blue24bluer/AllInOne.jpg
+                                if [[ $nN == "Y" ]];then
+                                        cd $PREFIX/etc/B24B/blue24bluer/
+                                        wget https://raw.githubusercontent.com/blue24bluer/AllInOne/main/AllInOne.jpg &>>/dev/null
+                                        jp2a --colors --background=dark --width=69 $PREFIX/etc/B24B/blue24bluer/AllInOne.jpg
+                                else
+
+                                        echo -e ${red} "No Network !"
+                                fi
                         fi
                         echo -e ${red} "########################Admin Panle########################"
                         echo -e $info "(*)[Put The Password] :"
