@@ -1128,25 +1128,25 @@ echo "
 ##         By Blue24Bluer       ##
 ##                              ##
 ##################################
-termux=\'$termux\'
-PREFIX=\'$PREFIX\'
-system_Server=\'$PREFIX/etc/Hacked/\'
-system_Home=\'$PREFIX/etc/B24B/blue24bluer/\'
-human_voice=\'MA\'
-if [[ \'\${termux}\' == \'true\' ]];then
-        if [[ ${root} == \'su' ]];then
-                sudo=\'su\'
+termux=\ $termux 
+PREFIX= $PREFIX 
+system_Server= $PREFIX/etc/Hacked/ 
+system_Home= $PREFIX/etc/B24B/blue24bluer/ 
+human_voice= MA 
+if [[  \${termux}  ==  true  ]];then
+        if [[ ${root} ==  su ]];then
+                sudo= su 
         fi
 else
 
-        password=\'${rootp}\'
+        password= ${rootp} 
         sudo=$(echo \${rootp} | sudo -S )
 fi
 
-USR=\'$(whoami)\'
-AI=\'true\'
+USR= $(whoami) 
+AI= true 
 
-if [[ \'\$termux\' == \'true\' ]];then
+if [[ \$termux == true ]];then
         Lang=$(getprop persist.sys.locale | cut -c 1-2)
 else
         Lang=$(echo -e $LANG | cut -c 1-2)
