@@ -13119,7 +13119,7 @@ if [[ -d $PREFIX/etc/Hacked/ ]];then
 
 						if [[ -d $PREFIX/etc/B24B/blue24bluer/Logo ]];then
 
-							if [[ -f $PREFIX/bin/BlueTheKingBlue ]];then
+#							if [[ -f $PREFIX/bin/BlueTheKingBlue ]];then
 
 								if [[ -d $PREFIX/etc/Hacked/stutus ]];then
 
@@ -13155,15 +13155,15 @@ if [[ -d $PREFIX/etc/Hacked/ ]];then
 									stutus
 								fi
 
-							else
-								echo -e $r "Error [Bad package!"
-								read -n1 -p "Please press on any button continue"
-								clear
-								rm -rfd $PREFIX/etc/Hacked
-								badshell
-								stutus
+#							else
+								#echo -e $r "Error [Bad package!]"
+								#read -n1 -p "Please press on any button continue"
+								#clear
+								#rm -rfd $PREFIX/etc/Hacked
+								#badshell
+								#stutus
 
-							fi
+#							fi
 
 						else
 							echo -e $r "Error [Bad package!]"
