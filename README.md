@@ -93,7 +93,7 @@ AllInOne Pro is a private project for the public that requests features beyond t
 
 ## Follow me !
 
-[Instagram](https://instagram.com/Blue24Bluer) - [GitHub](https://github.com/blue24bluer)
+[Instagram](https://instagram.com/blue2.4bluer) - [GitHub](https://github.com/blue24bluer)
 [TikTok](https://tiktok.com/Blue24Bluer) - [Facebook](https://facebook.com/Blue24Bluer)
 [SnapChat](https://snapchat.com/Blue24Bluer) - [Telegram](https://tm.me/Blue24Bluer/)
 
