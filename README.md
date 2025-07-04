@@ -110,7 +110,11 @@
 
 ## 📥 طريقة التثبيت
 
-1.  افتح الطرفية (Terminal) وقم بنسخ المستودع من GitHub:
+1.  افتح الطرفية (Terminal) وتثبيت الاساسيات اولا لمستخدمي Termux :
+    ```bash
+    apt update -y && apt upgrade -y && apt install python wget curl git -y
+    ```
+1.  قم بنسخ المستودع من GitHub:
     ```bash
     git clone https://github.com/blue24bluer/AllInOne.git
     ```
@@ -124,7 +128,7 @@
     ```bash
     chmod +x AllInOne
     ```
-4.  لمستخدمي **Termux**، يجب منح صلاحية الوصول إلى الذاكرة:
+4.  لمستخدمي **Termux**، يجب منح صلاحية الوصول إلى الذاكرة و تثبيت termux:api , termux:boot :
     ```bash
     termux-setup-storage
     ```
